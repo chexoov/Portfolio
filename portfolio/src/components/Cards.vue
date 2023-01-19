@@ -23,6 +23,25 @@
       :class="{'translate-x-[-12rem] translate-y-[11rem] rotate-[-4deg] hover:scale-110 duration-[1s]': isClicked}"
     ></div>
     <div
+      id="littleCardTailwind"
+      class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-1rem] translate-y-[-14rem] rotate-[-4deg] hover:scale-110 duration-[1s]': isClicked}"
+    ></div>
+    <div
+      id="littleCardVite"
+      class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-14rem] translate-y-[15rem] rotate-[-14deg] hover:scale-110 duration-[1s]': isClicked}"
+    >
+      <img src="../images/vite.png" alt="Vite">
+    </div>
+    <div
+      id="littleCardPinia"
+      class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-8rem] translate-y-[15rem] rotate-[14deg] hover:scale-110 duration-[1s]': isClicked}"
+    >
+      <img src="../images/pinia.png" alt="Pinia" class="rounded-xl">
+    </div>
+    <div
       id="littleCardHs"
       class="transition squareTransitionFunc duration-[5s] z-[35] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
       :class="{'translate-x-[13rem] translate-y-[13.5rem] rotate-[12deg] hover:scale-110 duration-[1s]': isClicked}"
@@ -113,6 +132,11 @@ export default {
 
 #littleCardCheckers {
   background-image: url('../images/checkers.png');
+  background-size: contain;
+}
+
+#littleCardTailwind {
+  background-image: url('../images/tailwind.png');
   background-size: contain;
 }
 
