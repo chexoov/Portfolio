@@ -23,7 +23,7 @@
       </a>
       <p
         class="text-white absolute transition translate-y-[-4rem] z-[-1]"
-        :class="{' translate-x-[-4rem]': isSquareHovered}"
+        :class="{' translate-x-[-4rem]': isGitSquareHovered}"
       >
         Мой GitHub
       </p>
@@ -215,7 +215,7 @@ export default {
       isHovered: false,
       isClicked: false,
       isOnPosition: false,
-      isSquareHovered: false,
+      isGitSquareHovered: false,
     };
   },
   methods: {
@@ -223,7 +223,7 @@ export default {
       this.isHovered = !this.isHovered;
     },
     changeSquareHoverState() {
-      this.isSquareHovered = !this.isSquareHovered;
+      this.isGitSquareHovered = !this.isGitSquareHovered;
     },
     changePositionState() {
       this.isOnPosition = !this.isOnPosition;
