@@ -6,7 +6,7 @@
     <div
       id="littleCardGit"
       class="transition squareTransitionFunc duration-[5s] z-[25] bg-[#ffffff2f] w-20 aspect-square rounded-xl absolute"
-      :class="{'translate-x-[-8rem] translate-y-[-9rem] rotate-[8deg] hover:scale-110 duration-[1s] cursor-pointer': isClicked}"
+      :class="{'translate-x-[-8rem] translate-y-[-9rem] rotate-[8deg] hover:scale-110 duration-[1s] cursor-pointer delay-[2s]': isClicked}"
     >
     <a href="https://github.com/Inoooooor">
       <img src="../images/github.png" class="h-[100%] w-[100%]" alt="GitHub">
@@ -20,36 +20,78 @@
     <div
       id="littleCardVue"
       class="transition squareTransitionFunc duration-[5s] z-[15] bg-[#000000] w-20 aspect-square rounded-xl absolute"
-      :class="{'translate-x-[-12rem] translate-y-[11rem] rotate-[-4deg] hover:scale-110 duration-[1s]': isClicked}"
+      :class="{'translate-x-[-12rem] translate-y-[11rem] rotate-[-4deg] hover:scale-110 duration-[1s] delay-[4s]': isClicked}"
     ></div>
     <div
       id="littleCardTailwind"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
-      :class="{'translate-x-[-1rem] translate-y-[-14rem] rotate-[-4deg] hover:scale-110 duration-[1s]': isClicked}"
+      :class="{'translate-x-[-1rem] translate-y-[-14rem] rotate-[-4deg] hover:scale-110 duration-[1s] delay-[1.2s]': isClicked}"
     ></div>
     <div
       id="littleCardVite"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
-      :class="{'translate-x-[-14rem] translate-y-[15rem] rotate-[-14deg] hover:scale-110 duration-[1s]': isClicked}"
+      :class="{'translate-x-[-14rem] translate-y-[15rem] rotate-[-14deg] hover:scale-110 duration-[1s] delay-[4.1s]': isClicked}"
     >
       <img src="../images/vite.png" alt="Vite">
     </div>
     <div
       id="littleCardPinia"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
-      :class="{'translate-x-[-8rem] translate-y-[15rem] rotate-[14deg] hover:scale-110 duration-[1s]': isClicked}"
+      :class="{'translate-x-[-8rem] translate-y-[13rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[4.2s]': isClicked}"
     >
       <img src="../images/pinia.png" alt="Pinia" class="rounded-xl">
     </div>
     <div
+      id="littleCardfirebase"
+      class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-10rem] translate-y-[17rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[4.3s]': isClicked}"
+    >
+      <img src="../images/firebase.png" alt="firebase" class="rounded-xl">
+    </div>
+    <div
+      id="littleCardfigma"
+      class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-22rem] translate-y-[-3.5rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[3s]': isClicked}"
+    >
+      <img src="../images/figma.png" alt="figma" class="rounded-xl">
+    </div>
+    <div
+      id="littleCardphotoshop"
+      class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-22rem] translate-y-[1rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[3.1s]': isClicked}"
+    >
+      <img src="../images/photoshop.png" alt="photoshop" class="rounded-xl">
+    </div>
+    <div
+      id="littleCardillustrator"
+      class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-22rem] translate-y-[5.5rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[3.2s]': isClicked}"
+    >
+      <img src="../images/illustrator.png" alt="illustrator" class="rounded-xl">
+    </div>
+    <div
+      id="littleCardBootstrap"
+      class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[4rem] translate-y-[-15rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[1s]': isClicked}"
+    >
+      <img src="../images/bootstrap.png" alt="Bootstrap" class="rounded-xl">
+    </div>
+    <div
+      id="littleCardsass"
+      class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-2rem] translate-y-[-17.5rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[1.1s]': isClicked}"
+    >
+      <img src="../images/sass.png" alt="sass" class="rounded-xl">
+    </div>
+    <div
       id="littleCardHs"
       class="transition squareTransitionFunc duration-[5s] z-[35] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
-      :class="{'translate-x-[13rem] translate-y-[13.5rem] rotate-[12deg] hover:scale-110 duration-[1s]': isClicked}"
+      :class="{'translate-x-[13rem] translate-y-[13.5rem] rotate-[12deg] hover:scale-110 duration-[1s] delay-[5s]': isClicked}"
     ></div>
     <div
       id="littleCardCheckers"
       class="transition squareTransitionFunc duration-[5s] z-[35] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
-      :class="{'translate-x-[7rem] translate-y-[15rem] rotate-[-12deg] hover:scale-110 duration-[1s] cursor-pointer': isClicked}"
+      :class="{'translate-x-[7rem] translate-y-[15rem] rotate-[-12deg] hover:scale-110 duration-[1s] cursor-pointer delay-[5.1s]': isClicked, 'delay-75': isOnPosition}"
     ></div>
     <div
     class="z-10 transition duration-500 bg-[#0055ff56] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
@@ -88,13 +130,22 @@ export default {
     return {
       isHovered: false,
       isClicked: false,
+      isOnPosition: false,
     }
   },
   methods: {
     changeHoverState() {
       this.isHovered = !this.isHovered
     },
+    changePositionState() {
+      this.isOnPosition = !this.isOnPosition
+    },
     changeClickState() {
+      if (this.isOnPosition) {
+        this.changePositionState();
+      } else {
+        setTimeout(this.changePositionState, 5300)
+      }
       this.isClicked = !this.isClicked
     }
   }
