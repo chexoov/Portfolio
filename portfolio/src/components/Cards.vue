@@ -21,27 +21,31 @@
     ></div>
     <div
     class=" transition duration-500 bg-[#ffffff27] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
-    :class="{ 'scale-110': isHovered }"
-    @mouseover="changeState()"
-    @mouseleave="changeState()"
+    :class="{ 'scale-105': isHovered, 'translate-x-[-7rem] translate-y-[1rem] rotate-[-20deg]': isClicked }"
+    @click="changeClickState()"
+    @mouseover="changeHoverState()"
+    @mouseleave="changeHoverState()"
     ></div>
     <div
     class=" transition duration-500 bg-[#ffffff27] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg]"
-    :class="{ 'scale-110': isHovered }"
-    @mouseover="changeState()"
-    @mouseleave="changeState()"
+    :class="{ 'scale-105': isHovered, 'translate-x-[-4rem] translate-y-[0.5rem] rotate-[-7deg]': isClicked }"
+    @click="changeClickState()"
+    @mouseover="changeHoverState()"
+    @mouseleave="changeHoverState()"
     ></div>
     <div
     class=" transition duration-500 bg-[#ffffff27] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg]"
-    :class="{ 'scale-110': isHovered }"
-    @mouseover="changeState()"
-    @mouseleave="changeState()"
+    :class="{ 'scale-105': isHovered, 'translate-x-[4rem] translate-y-[0.5rem] rotate-[7deg]': isClicked }"
+    @click="changeClickState()"
+    @mouseover="changeHoverState()"
+    @mouseleave="changeHoverState()"
     ></div>
     <div
     class=" transition duration-500 bg-[#ffffff27] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6"
-    :class="{ 'scale-110': isHovered }"
-    @mouseover="changeState()"
-    @mouseleave="changeState()"
+    :class="{ 'scale-105': isHovered, 'translate-x-[7rem] translate-y-[1rem] rotate-[20deg]': isClicked }"
+    @click="changeClickState()"
+    @mouseover="changeHoverState()"
+    @mouseleave="changeHoverState()"
     ></div>
   </div>
 </template>
@@ -51,11 +55,15 @@ export default {
   data() {
     return {
       isHovered: false,
+      isClicked: false,
     }
   },
   methods: {
-    changeState() {
+    changeHoverState() {
       this.isHovered = !this.isHovered
+    },
+    changeClickState() {
+      this.isClicked = !this.isClicked
     }
   }
 }
