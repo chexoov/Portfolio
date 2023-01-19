@@ -4,44 +4,57 @@
     class="bg-black h-[100%] w-[100%] grid place-items-center"
   >
     <div
-      id="littleCard"
-      class="bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
+      id="littleCardGit"
+      class="transition squareTransitionFunc duration-[5s] z-[25] bg-[#ffffff2f] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-8rem] translate-y-[-9rem] rotate-[8deg] hover:scale-110 duration-[1s] cursor-pointer': isClicked}"
+    >
+    <a href="https://github.com/Inoooooor">
+      <img src="../images/github.png" class="h-[100%] w-[100%]" alt="GitHub">
+    </a>
+    </div>
+    <div
+      id="littleCardTs"
+      class="transition squareTransitionFunc duration-[5s] z-[35] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[14rem] translate-y-[-7.5rem] rotate-[-2deg] hover:scale-110 duration-[1s]': isClicked}"
     ></div>
     <div
-      id="littleCard"
-      class="bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
+      id="littleCardVue"
+      class="transition squareTransitionFunc duration-[5s] z-[15] bg-[#000000] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[-12rem] translate-y-[11rem] rotate-[-4deg] hover:scale-110 duration-[1s]': isClicked}"
     ></div>
     <div
-      id="littleCard"
-      class="bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
+      id="littleCardHs"
+      class="transition squareTransitionFunc duration-[5s] z-[35] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[13rem] translate-y-[13.5rem] rotate-[12deg] hover:scale-110 duration-[1s]': isClicked}"
     ></div>
     <div
-      id="littleCard"
-      class="bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
+      id="littleCardCheckers"
+      class="transition squareTransitionFunc duration-[5s] z-[35] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
+      :class="{'translate-x-[7rem] translate-y-[15rem] rotate-[-12deg] hover:scale-110 duration-[1s] cursor-pointer': isClicked}"
     ></div>
     <div
-    class=" transition duration-500 bg-[#0055ff] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
+    class="z-10 transition duration-500 bg-[#0055ff56] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
     :class="{ 'scale-105': isHovered, 'translate-x-[-8rem] translate-y-[1rem] rotate-[-20deg]': isClicked }"
     @click="changeClickState()"
     @mouseover="changeHoverState()"
     @mouseleave="changeHoverState()"
     ></div>
     <div
-    class=" transition duration-500 bg-[#00ff48] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
+    class="z-20 transition duration-500 bg-[#00ff4845] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
     :class="{ 'scale-105': isHovered, 'translate-x-[-2rem] translate-y-[0.5rem] rotate-[-7deg]': isClicked }"
     @click="changeClickState()"
     @mouseover="changeHoverState()"
     @mouseleave="changeHoverState()"
     ></div>
     <div
-    class=" transition duration-500 bg-[#f9f942] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
+    class="z-30 transition duration-500 bg-[#f9f94246] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
     :class="{ 'scale-105': isHovered, 'translate-x-[4rem] translate-y-[0.5rem] rotate-[7deg]': isClicked }"
     @click="changeClickState()"
     @mouseover="changeHoverState()"
     @mouseleave="changeHoverState()"
     ></div>
     <div
-    class=" transition duration-500 bg-[#ff003c] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6 shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
+    class="z-40 transition duration-500 bg-[#ff003c39] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6 shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
     :class="{ 'scale-105': isHovered, 'translate-x-[10rem] translate-y-[2rem] rotate-[20deg]': isClicked }"
     @click="changeClickState()"
     @mouseover="changeHoverState()"
@@ -74,8 +87,33 @@ export default {
   transform: translateX(-50px);
 } */
 
-.move {
-  transform: scale(110%);
+.squareTransitionFunc {
+  transition-timing-function: cubic-bezier(.11,.86,0,1.06);
+}
+
+#littleCardGit {
+  /* background-image: url('../images/github.png'); */
+  background-size: contain;
+}
+
+#littleCardTs {
+  background-image: url('../images/ts.png');
+  background-size: contain;
+}
+
+#littleCardVue {
+  background-image: url('../images/vue.png');
+  background-size: contain;
+}
+
+#littleCardHs {
+  background-image: url('../images/hs.png');
+  background-size: contain;
+}
+
+#littleCardCheckers {
+  background-image: url('../images/checkers.png');
+  background-size: contain;
 }
 
 </style>
