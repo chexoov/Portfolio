@@ -205,6 +205,9 @@
       @mouseover="changeHoverState()"
       @mouseleave="changeHoverState()"
     ></div>
+    <!-- <div id="arrowPointer" class=" translate-x-[10rem] w-[5rem]">
+      <img src="../images/arrow.gif" alt="">
+    </div> -->
   </div>
 </template>
 
