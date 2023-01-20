@@ -6,7 +6,12 @@ module.exports = {
 
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionDelay: {
+        '0': '0ms',
+        '2000': '2000ms',
+      }
+    },
   },
   plugins: [],
 }

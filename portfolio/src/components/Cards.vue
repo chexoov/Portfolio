@@ -11,7 +11,7 @@
       :class="{
         'translate-x-[-8rem] translate-y-[-9rem] rotate-[8deg] hover:scale-110 duration-[1s] cursor-pointer delay-[2s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     >
       <a href="https://github.com/Inoooooor" target="_blank">
@@ -34,7 +34,7 @@
       :class="{
         'translate-x-[14rem] translate-y-[-7.5rem] rotate-[-2deg] hover:scale-110 duration-[1s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     ></div>
     <div
@@ -43,7 +43,7 @@
       :class="{
         'translate-x-[-12rem] translate-y-[11rem] rotate-[-4deg] hover:scale-110 duration-[1s] delay-[4s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     ></div>
     <div
@@ -52,7 +52,7 @@
       :class="{
         'translate-x-[-1rem] translate-y-[-14rem] rotate-[-4deg] hover:scale-110 duration-[1s] delay-[1.2s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     ></div>
     <div
@@ -61,7 +61,7 @@
       :class="{
         'translate-x-[-14rem] translate-y-[15rem] rotate-[-14deg] hover:scale-110 duration-[1s] delay-[4.1s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     >
       <img src="../images/vite.png" alt="Vite" />
@@ -72,7 +72,7 @@
       :class="{
         'translate-x-[-8rem] translate-y-[13rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[4.2s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     >
       <img src="../images/pinia.png" alt="Pinia" class="rounded-xl" />
@@ -83,7 +83,7 @@
       :class="{
         'translate-x-[-10rem] translate-y-[17rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[4.3s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     >
       <img src="../images/firebase.png" alt="firebase" class="rounded-xl" />
@@ -94,7 +94,7 @@
       :class="{
         'translate-x-[-22rem] translate-y-[-3.5rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[3s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     >
       <img src="../images/figma.png" alt="figma" class="rounded-xl" />
@@ -105,7 +105,7 @@
       :class="{
         'translate-x-[-22rem] translate-y-[1rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[3.1s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     >
       <img src="../images/photoshop.png" alt="photoshop" class="rounded-xl" />
@@ -116,7 +116,7 @@
       :class="{
         'translate-x-[-22rem] translate-y-[5.5rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[3.2s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     >
       <img
@@ -131,7 +131,7 @@
       :class="{
         'translate-x-[4rem] translate-y-[-15rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[1s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     >
       <img src="../images/bootstrap.png" alt="Bootstrap" class="rounded-xl" />
@@ -142,7 +142,7 @@
       :class="{
         'translate-x-[-2rem] translate-y-[-17.5rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[1.1s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     >
       <img src="../images/sass.png" alt="sass" class="rounded-xl" />
@@ -153,7 +153,7 @@
       :class="{
         'translate-x-[13rem] translate-y-[13.5rem] rotate-[12deg] hover:scale-110 duration-[1s] delay-[5s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     ></div>
     <div
@@ -162,7 +162,7 @@
       :class="{
         'translate-x-[7rem] translate-y-[15rem] rotate-[-12deg] hover:scale-110 duration-[1s] cursor-pointer delay-[5.1s]':
           isClicked,
-        'delay-[0s]': isOnPosition,
+        'delay-0': isOnPosition,
       }"
     ></div>
     <div
