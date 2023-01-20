@@ -158,13 +158,17 @@
     ></div>
     <div
       id="littleCardCheckers"
-      class="transition squareTransitionFunc duration-[5s] z-[15] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
+      @mouseover.capture="changeCheckerSquareState()"
+      @mouseleave.capture="changeCheckerSquareState()"
+      class="transition squareTransitionFunc duration-[5s] z-[15] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute grid place-items-center"
       :class="{
         'translate-x-[7rem] translate-y-[15rem] rotate-[-12deg] hover:scale-110 duration-[1s] cursor-pointer delay-[5.1s]':
           isClicked,
         'delay-[0ms]': isOnPosition,
       }"
-    ></div>
+    >
+      <p class=" leading-4 text-white transition text-center " :class="{ 'translate-x-[-5rem]': isCheckersSquareHovered }">Мои Онлайн Шашки (сырые)</p>
+      </div>
     <div
       class="z-10 transition duration-500 bg-[#0055ff] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
       :class="{
@@ -219,6 +223,7 @@ export default {
       isClicked: false,
       isOnPosition: false,
       isGitSquareHovered: false,
+      isCheckersSquareHovered: false,
     };
   },
   methods: {
@@ -230,6 +235,9 @@ export default {
     },
     changePositionState() {
       this.isOnPosition = !this.isOnPosition;
+    },
+    changeCheckerSquareState() {
+      this.isCheckersSquareHovered = !this.isCheckersSquareHovered;
     },
     changeClickState() {
       if (this.isOnPosition) {
