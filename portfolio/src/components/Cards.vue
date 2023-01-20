@@ -166,8 +166,11 @@
           isClicked,
         'delay-[0ms]': isOnPosition,
       }"
-    >
-      <p class=" leading-4 text-white transition text-center " :class="{ 'translate-x-[-5rem]': isCheckersSquareHovered }">Мои Онлайн Шашки (сырые)</p>
+    ><a href="https://checkers-1bbc2.web.app/" target="_blank">
+      <img src="../images/checkers.png" alt="Checkers" class="h-[100%] w-[100%] rounded-2xl"
+      >
+      </a>
+      <p class=" leading-4 text-white transition text-center absolute -z-[1]" :class="{ 'translate-x-[-5rem]': isCheckersSquareHovered }">Мои Онлайн Шашки (сырые)</p>
       </div>
     <div
       class="z-10 transition duration-500 bg-[#0055ff] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
@@ -281,7 +284,7 @@ export default {
 }
 
 #littleCardCheckers {
-  background-image: url("../images/checkers.png");
+  /* background-image: url("../images/checkers.png"); */
   background-size: contain;
 }
 
