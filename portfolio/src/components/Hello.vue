@@ -3,7 +3,7 @@
 
 <div class="hello-parent">
   
-  <svg class="hello-word" width="365" height="365" viewBox="0 0 365 365">
+  <svg class="hello-word" width="450" height="365" viewBox="0 0 450 365">
     
     
     <g id="H-letter">
@@ -54,7 +54,25 @@
   
       -->
       
-      <line x1="325" y1="320" x2="325" y2="320" stroke="#FF5851" class="red-dot" />
+      <line x1="325" y1="320" x2="325" y2="320" stroke="#ff003c" class="red-dot" />
+    </g>
+    <g id="green-dot">
+      <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
+      
+      <circle class="red-dot" cx="325" cy="260" r="20" fill="#FF5851" stroke="none" />
+  
+      -->
+      
+      <line x1="325" y1="320" x2="325" y2="320" stroke="#00ff48" stroke-width="33" class="green-dot" />
+    </g>
+    <g id="blue-dot">
+      <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
+      
+      <circle class="red-dot" cx="325" cy="260" r="20" fill="#FF5851" stroke="none" />
+  
+      -->
+      
+      <line x1="325" y1="320" x2="325" y2="320" stroke="#0055ff" stroke-width="33" class="blue-dot" />
     </g>
     
     
@@ -399,6 +417,49 @@ html, body, .hello-parent {
   stroke-width: 44px;
   stroke-linecap: round;
   animation: red-dot-grow 8s ease-out forwards;
+}
+
+.green-dot {
+  stroke-width: 34px;
+  stroke-linecap: round;
+  animation: green-dot-grow 8s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes green-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 34px;
+  }
+  100% {
+    stroke-width: 34px;
+  }
+}
+.blue-dot {
+  stroke-width: 24px;
+  stroke-linecap: round;
+  animation: blue-dot-grow 8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes blue-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 24px;
+  }
+  100% {
+    stroke-width: 24px;
+  }
 }
 
 @keyframes red-dot-grow {
