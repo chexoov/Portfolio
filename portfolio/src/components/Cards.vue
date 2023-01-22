@@ -9,9 +9,10 @@
       id="littleCardGit"
       class="transition squareTransitionFunc duration-[5s] z-[15] bg-[#ffffff2f] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-8rem] translate-y-[-9rem] rotate-[8deg] hover:scale-110 duration-[1s] cursor-pointer delay-[2s]':
+        'translate-x-[-8rem] translate-y-[-9rem] rotate-[8deg] hover:scale-110 duration-[1s] cursor-pointer ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[2s]': !isOnPosition
       }"
     >
       <a href="https://github.com/Inoooooor" target="_blank">
@@ -41,27 +42,30 @@
       id="littleCardVue"
       class="transition squareTransitionFunc duration-[5s] z-[15] bg-[#000000] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-12rem] translate-y-[11rem] rotate-[-4deg] hover:scale-110 duration-[1s] delay-[4s]':
+        'translate-x-[-12rem] translate-y-[11rem] rotate-[-4deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[4s]': !isOnPosition
       }"
     ></div>
     <div
       id="littleCardTailwind"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-1rem] translate-y-[-14rem] rotate-[-4deg] hover:scale-110 duration-[1s] delay-[1.2s]':
+        'translate-x-[-1rem] translate-y-[-14rem] rotate-[-4deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[1.2s]': !isOnPosition
       }"
     ></div>
     <div
       id="littleCardVite"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-14rem] translate-y-[15rem] rotate-[-14deg] hover:scale-110 duration-[1s] delay-[4.1s]':
+        'translate-x-[-14rem] translate-y-[15rem] rotate-[-14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[4.1s]': !isOnPosition
       }"
     >
       <img src="../images/vite.png" alt="Vite" />
@@ -70,9 +74,10 @@
       id="littleCardPinia"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-8rem] translate-y-[13rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[4.2s]':
+        'translate-x-[-8rem] translate-y-[13rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[4.2s]': !isOnPosition
       }"
     >
       <img src="../images/pinia.png" alt="Pinia" class="rounded-xl" />
@@ -81,9 +86,10 @@
       id="littleCardfirebase"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-10rem] translate-y-[17rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[4.3s]':
+        'translate-x-[-10rem] translate-y-[17rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[4.3s]': !isOnPosition
       }"
     >
       <img src="../images/firebase.png" alt="firebase" class="rounded-xl" />
@@ -92,9 +98,10 @@
       id="littleCardfigma"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-22rem] translate-y-[-3.5rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[3s]':
+        'translate-x-[-22rem] translate-y-[-3.5rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[3s]': !isOnPosition
       }"
     >
       <img src="../images/figma.png" alt="figma" class="rounded-xl" />
@@ -103,9 +110,10 @@
       id="littleCardphotoshop"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-22rem] translate-y-[1rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[3.1s]':
+        'translate-x-[-22rem] translate-y-[1rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[3.1s]': !isOnPosition
       }"
     >
       <img src="../images/photoshop.png" alt="photoshop" class="rounded-xl" />
@@ -114,9 +122,10 @@
       id="littleCardillustrator"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-22rem] translate-y-[5.5rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[3.2s]':
+        'translate-x-[-22rem] translate-y-[5.5rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[3.2s]': !isOnPosition
       }"
     >
       <img
@@ -129,9 +138,10 @@
       id="littleCardBootstrap"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[4rem] translate-y-[-15rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[1s]':
+        'translate-x-[4rem] translate-y-[-15rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[1s]': !isOnPosition
       }"
     >
       <img src="../images/bootstrap.png" alt="Bootstrap" class="rounded-xl" />
@@ -140,9 +150,10 @@
       id="littleCardsass"
       class="transition squareTransitionFunc duration-[5s] z-[15] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[-2rem] translate-y-[-17.5rem] rotate-[14deg] hover:scale-110 duration-[1s] delay-[1.1s]':
+        'translate-x-[-2rem] translate-y-[-17.5rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[1.1s]': !isOnPosition
       }"
     >
       <img src="../images/sass.png" alt="sass" class="rounded-xl" />
@@ -151,9 +162,10 @@
       id="littleCardHs"
       class="transition squareTransitionFunc duration-[5s] z-[15] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
       :class="{
-        'translate-x-[13rem] translate-y-[13.5rem] rotate-[12deg] hover:scale-110 duration-[1s] delay-[5s]':
+        'translate-x-[13rem] translate-y-[13.5rem] rotate-[12deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[5s]': !isOnPosition
       }"
     ></div>
     <div
@@ -162,9 +174,10 @@
       @mouseleave.capture="changeCheckerSquareState()"
       class="transition squareTransitionFunc duration-[5s] z-[15] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute grid place-items-center"
       :class="{
-        'translate-x-[7rem] translate-y-[15rem] rotate-[-12deg] hover:scale-110 duration-[1s] cursor-pointer delay-[5.1s]':
+        'translate-x-[7rem] translate-y-[15rem] rotate-[-12deg] hover:scale-110 duration-[1s] cursor-pointer ':
           isClicked,
         'delay-[0ms]': isOnPosition,
+        'delay-[5.1s]': !isOnPosition
       }"
     ><a href="https://checkers-1bbc2.web.app/" target="_blank">
       <img src="../images/checkers.png" alt="Checkers" class="h-[100%] w-[100%] rounded-2xl"
@@ -243,12 +256,15 @@ export default {
       this.isCheckersSquareHovered = !this.isCheckersSquareHovered;
     },
     changeClickState() {
+      this.isClicked = !this.isClicked;
       if (this.isOnPosition) {
         this.changePositionState();
       } else {
-        setTimeout(this.changePositionState, 5200);
+        setTimeout(() => {
+          this.changePositionState();
+          return;
+        } , 5200);
       }
-      this.isClicked = !this.isClicked;
     },
   },
 };
