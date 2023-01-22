@@ -14,7 +14,7 @@
     </g>
     <g id="I-letter">
       <circle class="O-stroke-i" cx="138" cy="20" r="5" stroke="#fff" fill="none" stroke-width="20" />
-    <line class="H-left-stroke" x1="138" y1="62" x2="138" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
+    <line class="I-letter" x1="138" y1="62" x2="138" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
     </g>
     
     <!-- <g id="E-letter">
@@ -41,7 +41,7 @@
     </g> -->
     <g id="R-letter">
       <line class="R-two-long-stroke" x1="264" y1="153" x2="264" y2="274" stroke="#fff" stroke-width="34"></line>
-      <line class="R-long-stroke" x1="331" y1="170" x2="331" y2="214" stroke="#fff" stroke-width="34"></line>
+      <line class="R-long-stroke" x1="331" y1="170" x2="331" y2="213" stroke="#fff" stroke-width="34"></line>
       <line class="R-long-stroke" x1="331" y1="231" x2="331" y2="274" stroke="#fff" stroke-width="34"></line>
       <line class="H-mid-stroke-delayed" x1="264" y1="214" x2="315" y2="214" stroke="#fff" fill="none" stroke-width="34" />
       <line class="H-mid-stroke-delayed" x1="264" y1="170" x2="315" y2="170" stroke="#fff" fill="none" stroke-width="34" />
@@ -413,6 +413,45 @@ html, body, .hello-parent {
   }
   100% {
     stroke-width: 44px;
+  }
+}
+
+.R-long-stroke {
+  stroke-dasharray: 43px;
+  stroke-dashoffset: 43px;
+  animation: r-two-stroke 2s ease forwards;
+}
+
+@keyframes r-two-stroke {
+  0% {
+    stroke-dashoffset: 43px;
+  }
+  80% {
+    stroke-dashoffset: 10px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+.I-letter {
+  stroke-dasharray: 42px;
+  stroke-dashoffset: 42px;
+  animation: i-move 5s ease forwards;
+}
+
+@keyframes i-move {
+  0% {
+    stroke-dashoffset: 42px;
+  }
+  30% {
+    stroke-dashoffset: 42px;
+  }
+  40% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 </style>
