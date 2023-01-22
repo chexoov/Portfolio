@@ -3,7 +3,7 @@
     <div id="hello" class="">
       <Hello />
     </div>
-    <div id="cards" class=" bg-[#ffffff22] h-[100%] w-[100%] border-2">
+    <div id="cards" class=" bg-[#ffffff22] h-[100%] w-[100%]">
       <Cards />
     </div>
 

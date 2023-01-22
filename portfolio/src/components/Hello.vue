@@ -3,7 +3,7 @@
 
 <div class="hello-parent">
   
-  <svg class="hello-word" width="450" height="365" viewBox="0 0 450 365">
+  <svg class="hello-word" width="365" height="365" viewBox="0 0 365 365">
     
     
     <g id="H-letter">
@@ -13,7 +13,7 @@
     <line class="H-right-stroke" x1="84" y1="17" x2="84" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
     </g>
     <g id="I-letter">
-      <circle class="O-stroke-i" cx="138" cy="20" r="5" stroke="#fff" fill="none" stroke-width="20" />
+      <!-- <circle class="O-stroke-i" cx="138" cy="20" r="5" stroke="#fff" fill="none" stroke-width="20" /> -->
     <line class="I-letter" x1="138" y1="62" x2="138" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
     </g>
     
@@ -54,7 +54,7 @@
   
       -->
       
-      <line x1="325" y1="320" x2="325" y2="320" stroke="#ff003c" class="red-dot" />
+      <line x1="138" y1="20" x2="138" y2="20" stroke="#ff003c" class="red-dot" />
     </g>
     <g id="green-dot">
       <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
@@ -63,7 +63,7 @@
   
       -->
       
-      <line x1="325" y1="320" x2="325" y2="320" stroke="#00ff48" stroke-width="33" class="green-dot" />
+      <line x1="138" y1="20" x2="138" y2="20" stroke="#00ff48" stroke-width="33" class="green-dot" />
     </g>
     <g id="blue-dot">
       <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
@@ -72,7 +72,16 @@
   
       -->
       
-      <line x1="325" y1="320" x2="325" y2="320" stroke="#0055ff" stroke-width="33" class="blue-dot" />
+      <line x1="138" y1="20" x2="138" y2="20" stroke="#0055ff" stroke-width="33" class="blue-dot" />
+    </g>
+    <g id="yellow-dot">
+      <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
+      
+      <circle class="red-dot" cx="325" cy="260" r="20" fill="#FF5851" stroke="none" />
+  
+      -->
+      
+      <line x1="138" y1="20" x2="138" y2="20" stroke="#f9f942" stroke-width="33" class="yellow-dot" />
     </g>
     
     
@@ -108,7 +117,7 @@ html, body, .hello-parent {
 .hello-word {
   margin:auto;
   background-color: rgb(0, 0, 0);
-  border: #fff 1px solid;
+  /* border: #fff 1px solid; */
 }
 /* H Animation */
 
@@ -414,16 +423,17 @@ html, body, .hello-parent {
 /* Red Dot Animation */
 
 .red-dot {
-  stroke-width: 44px;
+  stroke-width: 0px;
   stroke-linecap: round;
   animation: red-dot-grow 8s ease-out forwards;
+  animation-delay: 1s;
 }
 
 .green-dot {
-  stroke-width: 34px;
+  stroke-width: 0px;
   stroke-linecap: round;
   animation: green-dot-grow 8s ease-out forwards;
-  animation-delay: 0.1s;
+  animation-delay: 1.1s;
 }
 
 @keyframes green-dot-grow {
@@ -434,17 +444,17 @@ html, body, .hello-parent {
     stroke-width: 0px;
   }
   20% {
-    stroke-width: 34px;
+    stroke-width: 24px;
   }
   100% {
-    stroke-width: 34px;
+    stroke-width: 24px;
   }
 }
 .blue-dot {
-  stroke-width: 24px;
+  stroke-width: 0px;
   stroke-linecap: round;
   animation: blue-dot-grow 8s ease-out forwards;
-  animation-delay: 0.2s;
+  animation-delay: 1.2s;
 }
 
 @keyframes blue-dot-grow {
@@ -455,10 +465,31 @@ html, body, .hello-parent {
     stroke-width: 0px;
   }
   20% {
-    stroke-width: 24px;
+    stroke-width: 14px;
   }
   100% {
-    stroke-width: 24px;
+    stroke-width: 14px;
+  }
+}
+.yellow-dot {
+  stroke-width: 0px;
+  stroke-linecap: round;
+  animation: yellow-dot-grow 8s ease-out forwards;
+  animation-delay: 1.3s;
+}
+
+@keyframes yellow-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 4px;
+  }
+  100% {
+    stroke-width: 4px;
   }
 }
 
@@ -470,10 +501,10 @@ html, body, .hello-parent {
     stroke-width: 0px;
   }
   20% {
-    stroke-width: 44px;
+    stroke-width: 34px;
   }
   100% {
-    stroke-width: 44px;
+    stroke-width: 34px;
   }
 }
 
