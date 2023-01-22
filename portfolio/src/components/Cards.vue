@@ -256,7 +256,6 @@ export default {
       this.isCheckersSquareHovered = !this.isCheckersSquareHovered;
     },
     changeClickState() {
-      this.isClicked = !this.isClicked;
       if (this.isOnPosition) {
         this.changePositionState();
       } else {
@@ -265,6 +264,7 @@ export default {
           return;
         } , 5200);
       }
+      this.isClicked = !this.isClicked;
     },
   },
 };
