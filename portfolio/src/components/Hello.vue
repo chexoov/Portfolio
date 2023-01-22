@@ -8,13 +8,13 @@
     
     <g id="H-letter">
     <line class="H-left-stroke" x1="17" y1="17" x2="17" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
-    <line class="H-mid-stroke" x1="17" y1="17" x2="84" y2="17" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
-    <line class="H-mid-stroke-delayed" x1="17" y1="62" x2="84" y2="62" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
+    <line class="H-mid-stroke" x1="17" y1="17" x2="82" y2="17" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
+    <line class="H-mid-stroke-delayed" x1="17" y1="62" x2="82" y2="62" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
     <line class="H-right-stroke" x1="84" y1="17" x2="84" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
     </g>
     <g id="I-letter">
       <circle class="O-stroke-i" cx="138" cy="20" r="5" stroke="#fff" fill="none" stroke-width="20" />
-    <line class="H-left-stroke" x1="138" y1="45" x2="138" y2="124" stroke="#fff" fill="none" stroke-width="34" />
+    <line class="H-left-stroke" x1="138" y1="62" x2="138" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
     </g>
     
     <!-- <g id="E-letter">
@@ -26,19 +26,26 @@
     
     <g id="L-one-letter">
       <line class="L-one-long-stroke" x1="17" y1="170" x2="17" y2="260" stroke="#fff" fill="none" stroke-width="34" />
-      <line class="L-one-short-stroke" x1="20" y1="260" x2="60" y2="260" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
+      <line class="L-one-short-stroke" x1="20" y1="170" x2="84" y2="260" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
+      <line class="L-one-long-stroke" x1="84" y1="170" x2="84" y2="260" stroke="#fff" fill="none" stroke-width="34" />
     </g>
     
     <g id="L-two-letter">
-      <line class="L-two-long-stroke" x1="104" y1="153" x2="104" y2="277" stroke="#fff" fill="none" stroke-width="34" />
-      <line class="L-two-short-stroke" x1="120" y1="260" x2="164" y2="260" stroke="#fff" fill="none" stroke-width="34" />
-      <!-- <line class="L-one-long-stroke" x1="200" y1="153" x2="200" y2="260" stroke="#fff" fill="none" stroke-width="34" /> -->
-
+      <line class="L-two-long-stroke" x1="138" y1="170" x2="138" y2="260" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
+      <line class="L-two-long-stroke-delayed" x1="205" y1="170" x2="205" y2="260" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
+      <line class="L-two-short-stroke" x1="140" y1="260" x2="200" y2="260" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
     </g>
     
     <!-- <g id="O-letter">
       <circle class="O-stroke" cx="231" cy="215" r="48" stroke="#fff" fill="none" stroke-width="31" />
     </g> -->
+    <g id="R-letter">
+      <line class="R-two-long-stroke" x1="264" y1="153" x2="264" y2="274" stroke="#fff" stroke-width="34"></line>
+      <line class="R-long-stroke" x1="331" y1="170" x2="331" y2="214" stroke="#fff" stroke-width="34"></line>
+      <line class="R-long-stroke" x1="331" y1="231" x2="331" y2="274" stroke="#fff" stroke-width="34"></line>
+      <line class="H-mid-stroke-delayed" x1="264" y1="214" x2="315" y2="214" stroke="#fff" fill="none" stroke-width="34" />
+      <line class="H-mid-stroke-delayed" x1="264" y1="170" x2="315" y2="170" stroke="#fff" fill="none" stroke-width="34" />
+    </g>
     
     <g id="red-dot">
       <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
@@ -47,7 +54,7 @@
   
       -->
       
-      <line x1="325" y1="260" x2="325" y2="260" stroke="#FF5851" class="red-dot" />
+      <line x1="325" y1="320" x2="325" y2="320" stroke="#FF5851" class="red-dot" />
     </g>
     
     
@@ -250,8 +257,8 @@ html, body, .hello-parent {
 }
 
 .L-one-short-stroke {
-  stroke-dasharray: 44px;
-  stroke-dashoffset: 44px;
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 100px;
   animation: L-one-short-move 10s ease forwards;
 }
 
@@ -272,10 +279,10 @@ html, body, .hello-parent {
 
 @keyframes L-one-short-move {
   0% {
-    stroke-dashoffset: 44px;
+    stroke-dashoffset: 90px;
   }
   13% {
-    stroke-dashoffset: 44px;
+    stroke-dashoffset: 0px;
   }
   18% {
     stroke-dashoffset: 0px;
@@ -288,23 +295,51 @@ html, body, .hello-parent {
 /* L Two Animation */
 
 .L-two-long-stroke {
-  stroke-dasharray: 124px;
-  stroke-dashoffset: 124px;
+  stroke-dasharray: 90px;
+  stroke-dashoffset: 90px;
   animation: L-two-long-move 20s ease forwards;
 }
 
+.R-two-long-stroke {
+  stroke-dasharray: 121px;
+  stroke-dashoffset: 121px;
+  animation: R-two-long-move 20s ease forwards;
+}
+
+.L-two-long-stroke-delayed {
+  stroke-dasharray: 90px;
+  stroke-dashoffset: 90px;
+  animation: L-two-long-move 20s ease forwards;
+  animation-delay: 0.3s;
+}
+
 .L-two-short-stroke {
-  stroke-dasharray: 44px;
-  stroke-dashoffset: 44px;
+  stroke-dasharray: 60px;
+  stroke-dashoffset: 60px;
   animation: L-two-short-move 10s ease forwards;
 }
 
 @keyframes L-two-long-move {
   0% {
-    stroke-dashoffset: 124px;
+    stroke-dashoffset: 90px;
   }
   3% {
-    stroke-dashoffset: 124px;
+    stroke-dashoffset: 90px;
+  }
+  8% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes R-two-long-move {
+  0% {
+    stroke-dashoffset: 121px;
+  }
+  3% {
+    stroke-dashoffset: 121px;
   }
   8% {
     stroke-dashoffset: 0px;
@@ -316,10 +351,10 @@ html, body, .hello-parent {
 
 @keyframes L-two-short-move {
   0% {
-    stroke-dashoffset: 44px;
+    stroke-dashoffset: 60px;
   }
   15% {
-    stroke-dashoffset: 44px;
+    stroke-dashoffset: 60px;
   }
   20% {
     stroke-dashoffset: 0px;
