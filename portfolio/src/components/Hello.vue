@@ -8,8 +8,8 @@
     
     <g id="H-letter">
     <line class="H-left-stroke" x1="17" y1="17" x2="17" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
-    <line class="H-mid-stroke" x1="33" y1="10" x2="68" y2="10" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
-    <line class="H-mid-stroke" x1="33" y1="62" x2="68" y2="62" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
+    <line class="H-mid-stroke" x1="17" y1="17" x2="84" y2="17" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
+    <line class="H-mid-stroke-delayed" x1="17" y1="62" x2="84" y2="62" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
     <line class="H-right-stroke" x1="84" y1="17" x2="84" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
     </g>
     <g id="I-letter">
@@ -32,7 +32,7 @@
     <g id="L-two-letter">
       <line class="L-two-long-stroke" x1="104" y1="153" x2="104" y2="277" stroke="#fff" fill="none" stroke-width="34" />
       <line class="L-two-short-stroke" x1="120" y1="260" x2="164" y2="260" stroke="#fff" fill="none" stroke-width="34" />
-      <line class="L-one-long-stroke" x1="200" y1="153" x2="200" y2="260" stroke="#fff" fill="none" stroke-width="34" />
+      <!-- <line class="L-one-long-stroke" x1="200" y1="153" x2="200" y2="260" stroke="#fff" fill="none" stroke-width="34" /> -->
 
     </g>
     
@@ -90,19 +90,25 @@ html, body, .hello-parent {
 .H-left-stroke {
   stroke-dasharray: 87px;
   /* stroke-dashoffset: 124; */
-  animation: H-left-move 40s ease forwards;
+  animation: H-left-move 20s ease forwards;
 }
 
+.H-mid-stroke-delayed {
+  stroke-dasharray: 67px;
+  stroke-dashoffset: 67px;
+  animation: H-mid-move 20s ease forwards;
+  animation-delay: 0.5s;
+}
 .H-mid-stroke {
-  stroke-dasharray: 37px;
-  stroke-dashoffset: 37px;
+  stroke-dasharray: 67px;
+  stroke-dashoffset: 67px;
   animation: H-mid-move 20s ease forwards;
 }
 
 .H-right-stroke {
-  stroke-dasharray: 124px;
+  stroke-dasharray: 87px;
   stroke-dashoffset: 104px;
-  animation: H-right-move 40s ease forwards;
+  animation: H-right-move 20s ease forwards;
 }
 
 @keyframes H-left-move {
@@ -119,10 +125,10 @@ html, body, .hello-parent {
 
 @keyframes H-mid-move {
   0% {
-    stroke-dashoffset: 37px;
+    stroke-dashoffset: 67px;
   }
   5% {
-    stroke-dashoffset: 37px;
+    stroke-dashoffset: 67px;
   }
   10% {
     stroke-dashoffset: 0px;
@@ -134,10 +140,10 @@ html, body, .hello-parent {
 
 @keyframes H-right-move {
   0% {
-    stroke-dashoffset: 124px;
+    stroke-dashoffset: 87px;
   }
   5% {
-    stroke-dashoffset: 124px;
+    stroke-dashoffset: 87px;
   }
   10% {
     stroke-dashoffset: 0px;
@@ -237,10 +243,10 @@ html, body, .hello-parent {
 
 .L-one-long-stroke {
   /* border-radius: 50px; */
-  stroke-dasharray: 124px;
-  stroke-dashoffset: 124px;
+  stroke-dasharray: 90px;
+  stroke-dashoffset: 90px;
   stroke-linecap: round;
-  animation: L-one-long-move 20s ease forwards;
+  animation: L-one-long-move 50s ease forwards;
 }
 
 .L-one-short-stroke {
@@ -251,10 +257,10 @@ html, body, .hello-parent {
 
 @keyframes L-one-long-move {
   0% {
-    stroke-dashoffset: 124px;
+    stroke-dashoffset: 87px;
   }
   2% {
-    stroke-dashoffset: 124px;
+    stroke-dashoffset: 0px;
   }
   7% {
     stroke-dashoffset: 0px;
