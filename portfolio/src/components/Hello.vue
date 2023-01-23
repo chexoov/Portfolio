@@ -1,6 +1,6 @@
 <template>
-  <Transition name="fade" mode="out-in">
-    <div v-if="isContactClicked" class="hello-parent flex flex-col">
+  <Transition name="fade" mode="out-in" appear>
+    <div v-if="!isContactClicked" class="hello-parent flex flex-col">
       <svg class="hello-word" width="365" height="277" viewBox="0 0 365 277">
         <g id="H-letter">
           <line
@@ -276,7 +276,7 @@ const options = {
 export default {
   data() {
     return {
-      isContactClicked: true,
+      isContactClicked: false,
     };
   },
   methods: {
