@@ -12,7 +12,7 @@
         'translate-x-[-8rem] translate-y-[-9rem] rotate-[8deg] hover:scale-110 duration-[1s] cursor-pointer ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[2s]': !isOnPosition
+        'delay-[2s]': !isOnPosition && isClicked
       }"
     >
       <a href="https://github.com/Inoooooor" target="_blank">
@@ -45,7 +45,7 @@
         'translate-x-[-12rem] translate-y-[11rem] rotate-[-4deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[4s]': !isOnPosition
+        'delay-[4s]': !isOnPosition && isClicked
       }"
     ></div>
     <div
@@ -55,7 +55,7 @@
         'translate-x-[-1rem] translate-y-[-14rem] rotate-[-4deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[1.2s]': !isOnPosition
+        'delay-[1.2s]': !isOnPosition && isClicked
       }"
     ></div>
     <div
@@ -65,7 +65,7 @@
         'translate-x-[-14rem] translate-y-[15rem] rotate-[-14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[4.1s]': !isOnPosition
+        'delay-[4.1s]': !isOnPosition && isClicked
       }"
     >
       <img src="../images/vite.png" alt="Vite" />
@@ -77,7 +77,7 @@
         'translate-x-[-8rem] translate-y-[13rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[4.2s]': !isOnPosition
+        'delay-[4.2s]': !isOnPosition && isClicked
       }"
     >
       <img src="../images/pinia.png" alt="Pinia" class="rounded-xl" />
@@ -89,7 +89,7 @@
         'translate-x-[-10rem] translate-y-[17rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[4.3s]': !isOnPosition
+        'delay-[4.3s]': !isOnPosition && isClicked
       }"
     >
       <img src="../images/firebase.png" alt="firebase" class="rounded-xl" />
@@ -101,7 +101,7 @@
         'translate-x-[-22rem] translate-y-[-3.5rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[3s]': !isOnPosition
+        'delay-[3s]': !isOnPosition && isClicked
       }"
     >
       <img src="../images/figma.png" alt="figma" class="rounded-xl" />
@@ -113,7 +113,7 @@
         'translate-x-[-22rem] translate-y-[1rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[3.1s]': !isOnPosition
+        'delay-[3.1s]': !isOnPosition && isClicked
       }"
     >
       <img src="../images/photoshop.png" alt="photoshop" class="rounded-xl" />
@@ -125,7 +125,7 @@
         'translate-x-[-22rem] translate-y-[5.5rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[3.2s]': !isOnPosition
+        'delay-[3.2s]': !isOnPosition && isClicked
       }"
     >
       <img
@@ -141,7 +141,7 @@
         'translate-x-[4rem] translate-y-[-15rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[1s]': !isOnPosition
+        'delay-[1s]': !isOnPosition && isClicked
       }"
     >
       <img src="../images/bootstrap.png" alt="Bootstrap" class="rounded-xl" />
@@ -153,7 +153,7 @@
         'translate-x-[-2rem] translate-y-[-17.5rem] rotate-[14deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[1.1s]': !isOnPosition
+        'delay-[1.1s]': !isOnPosition && isClicked
       }"
     >
       <img src="../images/sass.png" alt="sass" class="rounded-xl" />
@@ -165,7 +165,7 @@
         'translate-x-[13rem] translate-y-[13.5rem] rotate-[12deg] hover:scale-110 duration-[1s] ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[5s]': !isOnPosition
+        'delay-[5s]': !isOnPosition && isClicked
       }"
     ></div>
     <div
@@ -177,7 +177,7 @@
         'translate-x-[7rem] translate-y-[15rem] rotate-[-12deg] hover:scale-110 duration-[1s] cursor-pointer ':
           isClicked,
         'delay-[0ms]': isOnPosition,
-        'delay-[5.1s]': !isOnPosition
+        'delay-[5.1s]': !isOnPosition && isClicked
       }"
     ><a href="https://checkers-1bbc2.web.app/" target="_blank">
       <img src="../images/checkers.png" alt="Checkers" class="h-[100%] w-[100%] rounded-2xl"

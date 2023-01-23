@@ -1,105 +1,252 @@
 <template>
-  <!-- This is a recreation of the SVG animation that can be found on Wokine.com -->
+  <div class="hello-parent">
+    <svg class="hello-word" width="365" height="277" viewBox="0 0 365 277">
+      <g id="H-letter">
+        <line
+          class="H-left-stroke"
+          x1="17"
+          y1="17"
+          x2="17"
+          y2="104"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+          stroke-linecap="round"
+        />
+        <line
+          class="H-mid-stroke"
+          x1="17"
+          y1="17"
+          x2="82"
+          y2="17"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+          stroke-linecap="round"
+        />
+        <line
+          class="H-mid-stroke-delayed"
+          x1="17"
+          y1="62"
+          x2="82"
+          y2="62"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+          stroke-linecap="round"
+        />
+        <line
+          class="H-right-stroke"
+          x1="84"
+          y1="17"
+          x2="84"
+          y2="104"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+          stroke-linecap="round"
+        />
+      </g>
+      <g id="I-letter">
+        <!-- <circle class="O-stroke-i" cx="138" cy="20" r="5" stroke="#fff" fill="none" stroke-width="20" /> -->
+        <line
+          class="I-letter"
+          x1="138"
+          y1="62"
+          x2="138"
+          y2="104"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+          stroke-linecap="round"
+        />
+      </g>
 
-<div class="hello-parent">
-  
-  <svg class="hello-word" width="365" height="365" viewBox="0 0 365 365">
-    
-    
-    <g id="H-letter">
-    <line class="H-left-stroke" x1="17" y1="17" x2="17" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
-    <line class="H-mid-stroke" x1="17" y1="17" x2="82" y2="17" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
-    <line class="H-mid-stroke-delayed" x1="17" y1="62" x2="82" y2="62" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
-    <line class="H-right-stroke" x1="84" y1="17" x2="84" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
-    </g>
-    <g id="I-letter">
-      <!-- <circle class="O-stroke-i" cx="138" cy="20" r="5" stroke="#fff" fill="none" stroke-width="20" /> -->
-    <line class="I-letter" x1="138" y1="62" x2="138" y2="104" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
-    </g>
-    
-    <!-- <g id="E-letter">
+      <!-- <g id="E-letter">
       <line class="E-left-stroke" x1="138" y1="0" x2="138" y2="124" stroke="#000" fill="none" stroke-width="34" />
       <line class="E-top-stroke" x1="154" y1="17" x2="201" y2="17" stroke="#000" fill="none" stroke-width="34" />
       <line class="E-mid-stroke" x1="154" y1="62" x2="196" y2="62" stroke="#000" fill="none" stroke-width="34" />
       <line class="E-bottom-stroke" x1="154" y1="107" x2="201" y2="107" stroke="#000" fill="none" stroke-width="34" />
     </g> -->
-    
-    <g id="L-one-letter">
-      <line class="L-one-long-stroke" x1="17" y1="170" x2="17" y2="260" stroke="#fff" fill="none" stroke-width="34" />
-      <line class="L-one-short-stroke" x1="20" y1="170" x2="84" y2="260" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
-      <line class="L-one-long-stroke" x1="84" y1="170" x2="84" y2="260" stroke="#fff" fill="none" stroke-width="34" />
-    </g>
-    
-    <g id="L-two-letter">
-      <line class="L-two-long-stroke" x1="138" y1="170" x2="138" y2="260" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
-      <line class="L-two-long-stroke-delayed" x1="205" y1="170" x2="205" y2="260" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round"/>
-      <line class="L-two-short-stroke" x1="140" y1="260" x2="200" y2="260" stroke="#fff" fill="none" stroke-width="34" stroke-linecap="round" />
-    </g>
-    
-    <!-- <g id="O-letter">
+
+      <g id="L-one-letter">
+        <line
+          class="L-one-long-stroke"
+          x1="17"
+          y1="170"
+          x2="17"
+          y2="260"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+        />
+        <line
+          class="L-one-short-stroke"
+          x1="20"
+          y1="170"
+          x2="84"
+          y2="260"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+          stroke-linecap="round"
+        />
+        <line
+          class="L-one-long-stroke"
+          x1="84"
+          y1="170"
+          x2="84"
+          y2="260"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+        />
+      </g>
+
+      <g id="L-two-letter">
+        <line
+          class="L-two-long-stroke"
+          x1="138"
+          y1="170"
+          x2="138"
+          y2="260"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+          stroke-linecap="round"
+        />
+        <line
+          class="L-two-long-stroke-delayed"
+          x1="205"
+          y1="170"
+          x2="205"
+          y2="260"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+          stroke-linecap="round"
+        />
+        <line
+          class="L-two-short-stroke"
+          x1="140"
+          y1="260"
+          x2="200"
+          y2="260"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+          stroke-linecap="round"
+        />
+      </g>
+
+      <!-- <g id="O-letter">
       <circle class="O-stroke" cx="231" cy="215" r="48" stroke="#fff" fill="none" stroke-width="31" />
     </g> -->
-    <g id="R-letter">
-      <line class="R-two-long-stroke" x1="264" y1="153" x2="264" y2="274" stroke="#fff" stroke-width="34"></line>
-      <line class="R-long-stroke" x1="331" y1="170" x2="331" y2="213" stroke="#fff" stroke-width="34"></line>
-      <line class="R-long-stroke" x1="331" y1="231" x2="331" y2="274" stroke="#fff" stroke-width="34"></line>
-      <line class="H-mid-stroke-delayed" x1="264" y1="214" x2="315" y2="214" stroke="#fff" fill="none" stroke-width="34" />
-      <line class="H-mid-stroke-delayed" x1="264" y1="170" x2="315" y2="170" stroke="#fff" fill="none" stroke-width="34" />
-    </g>
-    
-    <g id="red-dot">
-      <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
-      
-      <circle class="red-dot" cx="325" cy="260" r="20" fill="#FF5851" stroke="none" />
-  
-      -->
-      
-      <line x1="138" y1="20" x2="138" y2="20" stroke="#ff003c" class="red-dot" />
-    </g>
-    <g id="green-dot">
-      <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
-      
-      <circle class="red-dot" cx="325" cy="260" r="20" fill="#FF5851" stroke="none" />
-  
-      -->
-      
-      <line x1="138" y1="20" x2="138" y2="20" stroke="#00ff48" stroke-width="33" class="green-dot" />
-    </g>
-    <g id="blue-dot">
-      <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
-      
-      <circle class="red-dot" cx="325" cy="260" r="20" fill="#FF5851" stroke="none" />
-  
-      -->
-      
-      <line x1="138" y1="20" x2="138" y2="20" stroke="#0055ff" stroke-width="33" class="blue-dot" />
-    </g>
-    <g id="yellow-dot">
-      <!-- Initially I tried creating a circle but it was harder to manipulate it how I wanted to in CSS so I resorted to using a line trick to make it look like a circle ....
-      
-      <circle class="red-dot" cx="325" cy="260" r="20" fill="#FF5851" stroke="none" />
-  
-      -->
-      
-      <line x1="138" y1="20" x2="138" y2="20" stroke="#f9f942" stroke-width="33" class="yellow-dot" />
-    </g>
-    
-    
-  </svg>
+      <g id="R-letter">
+        <line
+          class="R-two-long-stroke"
+          x1="264"
+          y1="153"
+          x2="264"
+          y2="274"
+          stroke="#fff"
+          stroke-width="34"
+        ></line>
+        <line
+          class="R-long-stroke"
+          x1="331"
+          y1="170"
+          x2="331"
+          y2="213"
+          stroke="#fff"
+          stroke-width="34"
+        ></line>
+        <line
+          class="R-long-stroke"
+          x1="331"
+          y1="231"
+          x2="331"
+          y2="274"
+          stroke="#fff"
+          stroke-width="34"
+        ></line>
+        <line
+          class="H-mid-stroke-delayed"
+          x1="264"
+          y1="214"
+          x2="315"
+          y2="214"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+        />
+        <line
+          class="H-mid-stroke-delayed"
+          x1="264"
+          y1="170"
+          x2="315"
+          y2="170"
+          stroke="#fff"
+          fill="none"
+          stroke-width="34"
+        />
+      </g>
+
+      <g id="red-dot">
+        <line
+          x1="138"
+          y1="20"
+          x2="138"
+          y2="20"
+          stroke="#ff003c"
+          class="red-dot"
+        />
+      </g>
+      <g id="green-dot">
+        <line
+          x1="138"
+          y1="20"
+          x2="138"
+          y2="20"
+          stroke="#00ff48"
+          stroke-width="33"
+          class="green-dot"
+        />
+      </g>
+      <g id="blue-dot">
+        <line
+          x1="138"
+          y1="20"
+          x2="138"
+          y2="20"
+          stroke="#0055ff"
+          stroke-width="33"
+          class="blue-dot"
+        />
+      </g>
+      <g id="yellow-dot">
+        <line
+          x1="138"
+          y1="20"
+          x2="138"
+          y2="20"
+          stroke="#f9f942"
+          stroke-width="33"
+          class="yellow-dot"
+        />
+      </g>
+    </svg>
   </div>
-  
 </template>
 
-
 <script lang="ts">
-  export default {
-
-  }
+export default {};
 </script>
 
-
 <style scoped>
-html, body, .hello-parent {
+html,
+body,
+.hello-parent {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -107,15 +254,16 @@ html, body, .hello-parent {
 
 .hello-parent {
   display: flex;
-  background: #fff;
-  background: -webkit-radial-gradient(#fff, #eaeaea); 
-  background: -o-radial-gradient(#fff, #eaeaea); 
+  background: rgb(0, 0, 0);
+  /* background: -webkit-radial-gradient(#fff, #eaeaea);
+  background: -o-radial-gradient(#fff, #eaeaea);
   background: -moz-radial-gradient(#fff, #eaeaea);
-  background: radial-gradient(#fff, #eaeaea); 
+  background: radial-gradient(#fff, #eaeaea); */
 }
 
 .hello-word {
-  margin:auto;
+  /* position: absolute; */
+  margin: auto;
   background-color: rgb(0, 0, 0);
   /* border: #fff 1px solid; */
 }
