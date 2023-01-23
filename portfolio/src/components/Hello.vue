@@ -284,8 +284,8 @@ html, body, .hello-parent {
 }
 
 .L-one-short-stroke {
-  stroke-dasharray: 100px;
-  stroke-dashoffset: 100px;
+  stroke-dasharray: 110px;
+  stroke-dashoffset: 110px;
   animation: L-one-short-move 10s ease forwards;
 }
 
@@ -306,7 +306,7 @@ html, body, .hello-parent {
 
 @keyframes L-one-short-move {
   0% {
-    stroke-dashoffset: 90px;
+    stroke-dashoffset: 110px;
   }
   13% {
     stroke-dashoffset: 0px;
