@@ -1,5 +1,5 @@
 <template>
-  <div class="hello-parent">
+  <div class="hello-parent flex flex-col">
     <svg class="hello-word" width="365" height="277" viewBox="0 0 365 277">
       <g id="H-letter">
         <line
@@ -236,7 +236,11 @@
         />
       </g>
     </svg>
+    <p class="text-white tracking-[0.3rem] text-lg py-4 mount-anime">Web-developer / Freelancer</p>
+<button class=" button-64 mount-anime-btn " role="button"><span class="text">Напиши мне</span></button>
+
   </div>
+
 </template>
 
 <script lang="ts">
@@ -252,8 +256,85 @@ body,
   margin: 0;
 }
 
-.hello-parent {
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#00ff48, #f9f942 30%, #ff003c 60%, #0055ff);
+  border: 0;
+  border-radius: 17px;
+  /* box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px; */
+  box-sizing: border-box;
+  color: #FFFFFF;
   display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 0.8rem;
+  max-width: 10rem;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(0, 0, 0);
+  padding: 16px 24px;
+  border-radius: 17px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+.mount-anime {
+  /* animation-delay: 3s; */
+  opacity: 1;
+  animation: mount-move 3s ease;
+}
+
+.mount-anime-btn {
+  /* opacity: 1; */
+  animation: mount-move 4s ease;
+}
+
+@keyframes mount-move {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  
+  40% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  60% {
+    /* transform: translateY(5px); */
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hello-parent {
   background: rgb(0, 0, 0);
   /* background: -webkit-radial-gradient(#fff, #eaeaea);
   background: -o-radial-gradient(#fff, #eaeaea);
