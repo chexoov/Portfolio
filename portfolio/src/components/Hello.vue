@@ -299,7 +299,6 @@ body,
 
 .fade-enter-active {
   transition: opacity 1s ease;
-  transition-delay: 1s;
 }
 
 .fade-leave-active {
