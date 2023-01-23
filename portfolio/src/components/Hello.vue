@@ -1,6 +1,6 @@
 <template>
   <Transition name="fade" mode="out-in" appear>
-    <div v-if="!isContactClicked" class="hello-parent flex flex-col">
+    <div v-if="!isForm" class="hello-parent flex flex-col">
       <svg class="hello-word" width="365" height="277" viewBox="0 0 365 277">
         <g id="H-letter">
           <line
@@ -244,7 +244,7 @@
     <div v-else id="sheet" class="bg-white w-[365px] h-[321px] pb-4"></div>
   </Transition>
   <button class="button-64 mount-anime-btn mt-4" role="button" @click="changeState">
-    <span class="text">Напиши мне</span>
+    <span class="text">{{ btnState }}</span>
   </button>
 </template>
 
@@ -276,15 +276,19 @@ const options = {
 export default {
   data() {
     return {
-      isContactClicked: false,
+      isForm: false,
     };
   },
   methods: {
     changeState(): void {
-      this.isContactClicked = !this.isContactClicked;
-      console.log(this.isContactClicked)
+      this.isForm = !this.isForm;
     },
   },
+  computed: {
+    btnState() {
+      return this.isForm ? 'Отправить' : 'Напиши мне'
+    }
+  }
 };
 </script>
 
