@@ -62,14 +62,14 @@
             stroke-linecap="round"
           />
         </g>
-  
+
         <!-- <g id="E-letter">
         <line class="E-left-stroke" x1="138" y1="0" x2="138" y2="124" stroke="#000" fill="none" stroke-width="34" />
         <line class="E-top-stroke" x1="154" y1="17" x2="201" y2="17" stroke="#000" fill="none" stroke-width="34" />
         <line class="E-mid-stroke" x1="154" y1="62" x2="196" y2="62" stroke="#000" fill="none" stroke-width="34" />
         <line class="E-bottom-stroke" x1="154" y1="107" x2="201" y2="107" stroke="#000" fill="none" stroke-width="34" />
       </g> -->
-  
+
         <g id="L-one-letter">
           <line
             class="L-one-long-stroke"
@@ -103,7 +103,7 @@
             stroke-width="34"
           />
         </g>
-  
+
         <g id="L-two-letter">
           <line
             class="L-two-long-stroke"
@@ -139,7 +139,7 @@
             stroke-linecap="round"
           />
         </g>
-  
+
         <!-- <g id="O-letter">
         <circle class="O-stroke" cx="231" cy="215" r="48" stroke="#fff" fill="none" stroke-width="31" />
       </g> -->
@@ -192,7 +192,7 @@
             stroke-width="34"
           />
         </g>
-  
+
         <g id="red-dot">
           <line
             x1="138"
@@ -241,9 +241,43 @@
         Web-developer / Freelancer
       </p>
     </div>
-    <div v-else id="sheet" class="bg-white w-[365px] h-[321px] pb-4"></div>
+    <div
+      v-else
+      id="sheet"
+      class="bg-white bg-opacity-20 w-[365px] h-[321px] pb-4 grid grid-cols-2 grid-rows-[1fr_1fr_3fr_1fr] gap-3 place-items-center"
+    >
+      <div class="form">
+        <input type="text" name="text" autocomplete="off" required />
+        <label for="text" class="label-name">
+          <span class="content-name"> Имя </span>
+        </label>
+      </div>
+      <div class="form">
+        <input type="text" name="text" autocomplete="off" required />
+        <label for="text" class="label-name">
+          <span class="content-name"> Тема сообщения </span>
+        </label>
+      </div>
+      <div class="form col-span-2">
+        <input type="text" name="text" autocomplete="off" required />
+        <label for="text" class="label-name">
+          <span class="content-name"> Почта </span>
+        </label>
+      </div>
+      <div class="form row-start-3 row-end-4 col-start-1 col-end-3">
+        <textarea type="text" name="text" autocomplete="off" required ></textarea>
+        <label for="text" class="label-name">
+          <span class="content-name"> Содержание </span>
+        </label>
+      </div>
+      <button class="row-start-4 row-end-5 col-start-1 col-end-3 bg-white w-[80%]">bruh</button>
+    </div>
   </Transition>
-  <button class="button-64 mount-anime-btn mt-4" role="button" @click="changeState">
+  <button
+    class="button-64 mount-anime-btn mt-4"
+    role="button"
+    @click="changeState"
+  >
     <span class="text">{{ btnState }}</span>
   </button>
 </template>
@@ -286,9 +320,9 @@ export default {
   },
   computed: {
     btnState() {
-      return this.isForm ? 'Отправить' : 'Напиши мне'
-    }
-  }
+      return this.isForm ? "Вернуться" : "Напиши мне";
+    },
+  },
 };
 </script>
 
@@ -299,6 +333,92 @@ body,
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+.form {
+  width: 100%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 20px;
+  border: none;
+  background-color: #484848;
+  text-indent: 0.3rem;
+}
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+.form label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(
+      to right,
+      #00ff48 0%,
+      #f9f942 25%,
+      #ff003c 50%,
+      #0055ff 90%
+    )
+    5;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 0.5rem;
+  padding-bottom: 5px;
+  transition: all 0.4s ease;
+  color: white;
+}
+.form input:focus {
+  outline: none;
+}
+.form textarea:focus {
+  outline: none;
+}
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-130%);
+  font-size: 14px;
+  left: 0.3rem;
+  color: #fce38a;
+}
+
+
+
+.form textarea:focus + .label-name .content-name,
+.form textarea:valid + .label-name .content-name {
+  transform: translateY(-130%);
+  font-size: 14px;
+  left: 0.3rem;
+  color: #fce38a;
+}
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.form textarea:focus + .label-name::after,
+.form textarea:valid + .label-name::after {
+  transform: translateX(0%);
 }
 
 .fade-enter-active {
