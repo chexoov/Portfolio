@@ -322,28 +322,6 @@
 <script lang="ts">
 import axios from "axios";
 
-// const options = {
-//   method: "POST",
-//   url: "https://api.telegram.org/bot5847470412%3AAAHs4sky2p9-PFyrz7v98nhCTRoYLRm6rSM/sendMessage",
-//   headers: { accept: "application/json", "content-type": "application/json" },
-//   data: {
-//     text: "hello \nBruh <b>BOLD</b>",
-//     disable_web_page_preview: false,
-//     disable_notification: false,
-//     parse_mode: "HTML",
-//     reply_to_message_id: null,
-//     chat_id: "602753868",
-//   },
-// };
-
-// axios
-//   .request(options)
-//   .then(function (response) {
-//     console.log(response.data);
-//   })
-//   .catch(function (error) {
-//     console.error(error);
-//   });
 export default {
   data() {
     return {
@@ -398,6 +376,10 @@ export default {
           .catch(function (error) {
             console.error(error);
           });
+        this.nameValue = '';
+        this.subjectValue = '';
+        this.emailValue = '';
+        this.textareaValue = '';
       }
     },
   },
