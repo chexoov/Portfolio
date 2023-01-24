@@ -340,6 +340,7 @@ body,
   position: relative;
   height: 60px;
   overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 .form:nth-child(4) {
