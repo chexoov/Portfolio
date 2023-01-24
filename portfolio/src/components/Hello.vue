@@ -246,7 +246,7 @@
       id="sheet"
       class="bg-white bg-opacity-0 w-[365px] h-[321px] pb-4 grid grid-cols-2 grid-rows-[1fr_1fr_3fr_1fr] gap-3 place-items-center relative"
     >
-      <div class="form mount-anime-name">
+      <div class="form mount-anime-name z-10">
         <input
           v-model="nameValue"
           maxlength="15"
@@ -259,7 +259,7 @@
           <span class="content-name"> Имя </span>
         </label>
       </div>
-      <div class="form mount-anime-subject">
+      <div class="form mount-anime-subject z-10">
         <input
           v-model="subjectValue"
           maxlength="18"
@@ -312,7 +312,7 @@
       <!-- <Transition name="bot" appear> -->
       <div
         id="bot"
-        class="bg-white bg-opacity-20 absolute w-[80%] h-[3.7rem] right-2 top-0 z-10 bot-animation grid grid-cols-[4fr_1fr]"
+        class="bg-white bg-opacity-0 absolute w-[80%] h-[3.7rem] right-2 top-0 z-0 bot-animation grid grid-cols-[4fr_1fr]"
       >
         <div id="messagebox" class="bg-white h-10 message-borders w-[95%] flex items-center bot-message-anime">
           <p class="px-1">Привет, я телеграм-бот, бип</p>
@@ -434,7 +434,7 @@ body,
 }
 
 .bot-animation {
-  transform: translateY(-2.9rem);
+  transform: translateY(-3.4rem);
   animation: bot-move 10s ease;
 }
 
@@ -448,14 +448,13 @@ body,
     transform: translateY(0);
   }
   40% {
-    transform: translateY(0);
+    transform: translateY(-3.4rem);
+    opacity: 1;
   }
   50% {
-    opacity: 1;
-    transform: translateY(-2.9rem);
   }
   100% {
-    transform: translateY(-2.9rem);
+    transform: translateY(-3.4rem);
   }
 }
 
@@ -471,11 +470,11 @@ body,
   0% {
     opacity: 0;
   }
-  50% {
+  40% {
     opacity: 0;
     transform: translateX(100px) translateY(15px) scale(10%);
   }
-  55% {
+  45% {
     opacity: 1;
     transform: translateX(0) translateY(0) scale(100%);
   }
