@@ -247,30 +247,67 @@
       class="bg-white bg-opacity-0 w-[365px] h-[321px] pb-4 grid grid-cols-2 grid-rows-[1fr_1fr_3fr_1fr] gap-3 place-items-center"
     >
       <div class="form mount-anime-name">
-        <input v-model="nameValue" maxlength="15" type="text" name="text" autocomplete="off" required />
+        <input
+          v-model="nameValue"
+          maxlength="15"
+          type="text"
+          name="text"
+          autocomplete="off"
+          required
+        />
         <label for="text" class="label-name">
           <span class="content-name"> Имя </span>
         </label>
       </div>
       <div class="form mount-anime-subject">
-        <input v-model="subjectValue" maxlength="18" type="text" name="text" autocomplete="off" required />
+        <input
+          v-model="subjectValue"
+          maxlength="18"
+          type="text"
+          name="text"
+          autocomplete="off"
+          required
+        />
         <label for="text" class="label-name">
           <span class="content-name"> Тема сообщения </span>
         </label>
       </div>
       <div class="form mount-anime-mail col-span-2">
-        <input v-model="emailValue" type="text" name="text" autocomplete="off" required />
+        <input
+          v-model="emailValue"
+          type="text"
+          name="text"
+          maxlength="30"
+          autocomplete="off"
+          required
+        />
         <label for="text" class="label-name">
           <span class="content-name"> Почта </span>
         </label>
       </div>
-      <div class="form mount-anime-textarea row-start-3 row-end-4 col-start-1 col-end-3">
-        <textarea v-model="textareaValue" spellcheck="false" placeholder="Сообщение" type="text" name="text" autocomplete="off" required></textarea>
+      <div
+        class="form mount-anime-textarea row-start-3 row-end-4 col-start-1 col-end-3"
+      >
+        <textarea
+          v-model="textareaValue"
+          maxlength="200"
+          spellcheck="false"
+          placeholder="Сообщение"
+          type="text"
+          name="text"
+          autocomplete="off"
+          required
+        ></textarea>
         <label for="text" class="label-name">
           <!-- <span class="content-name"> Содержание </span> -->
         </label>
       </div>
-      <button @click="check()" class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700">Отправить</button>
+      <button
+        @click="sendForm()"
+        class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700"
+      >
+        Отправить
+      </button>
     </div>
   </Transition>
   <button
@@ -285,19 +322,19 @@
 <script lang="ts">
 import axios from "axios";
 
-const options = {
-  method: "POST",
-  url: "https://api.telegram.org/bot5847470412%3AAAHs4sky2p9-PFyrz7v98nhCTRoYLRm6rSM/sendMessage",
-  headers: { accept: "application/json", "content-type": "application/json" },
-  data: {
-    text: "hello \nBruh <b>BOLD</b>",
-    disable_web_page_preview: false,
-    disable_notification: false,
-    parse_mode: "HTML",
-    reply_to_message_id: null,
-    chat_id: "602753868",
-  },
-};
+// const options = {
+//   method: "POST",
+//   url: "https://api.telegram.org/bot5847470412%3AAAHs4sky2p9-PFyrz7v98nhCTRoYLRm6rSM/sendMessage",
+//   headers: { accept: "application/json", "content-type": "application/json" },
+//   data: {
+//     text: "hello \nBruh <b>BOLD</b>",
+//     disable_web_page_preview: false,
+//     disable_notification: false,
+//     parse_mode: "HTML",
+//     reply_to_message_id: null,
+//     chat_id: "602753868",
+//   },
+// };
 
 // axios
 //   .request(options)
@@ -311,10 +348,10 @@ export default {
   data() {
     return {
       isForm: false,
-      nameValue: '',
-      subjectValue: '',
-      emailValue: '',
-      textareaValue: '',
+      nameValue: "",
+      subjectValue: "",
+      emailValue: "",
+      textareaValue: "",
     };
   },
   methods: {
@@ -322,11 +359,47 @@ export default {
       this.isForm = !this.isForm;
     },
     check() {
-      console.log(this.nameValue)
-      console.log(this.subjectValue)
-      console.log(this.emailValue)
-      console.log(this.textareaValue)
-    }
+      console.log(this.nameValue);
+      console.log(this.subjectValue);
+      const emailCheck = this.emailValue.split("@").length;
+      console.log(this.emailValue);
+      console.log(emailCheck);
+      console.log(this.textareaValue);
+    },
+    sendForm() {
+      const emailCheck = this.emailValue.split("@").length;
+      if (
+        emailCheck === 2 &&
+        this.nameValue &&
+        this.textareaValue &&
+        this.subjectValue
+      ) {
+        const options = {
+          method: "POST",
+          url: "https://api.telegram.org/bot5847470412%3AAAHs4sky2p9-PFyrz7v98nhCTRoYLRm6rSM/sendMessage",
+          headers: {
+            accept: "application/json",
+            "content-type": "application/json",
+          },
+          data: {
+            text: `<b>Name:</b>\n${this.nameValue}\n<b>Subject:</b>\n${this.subjectValue}\n<b>Email:</b>\n${this.emailValue}\n<b>Text:</b>\n${this.textareaValue}`,
+            disable_web_page_preview: false,
+            disable_notification: false,
+            parse_mode: "HTML",
+            reply_to_message_id: null,
+            chat_id: "602753868",
+          },
+        };
+        axios
+          .request(options)
+          .then(function (response) {
+            console.log(response.data);
+          })
+          .catch(function (error) {
+            console.error(error);
+          });
+      }
+    },
   },
   computed: {
     btnState() {
@@ -357,7 +430,8 @@ body,
   height: 100%;
 }
 
-.form input, .form textarea {
+.form input,
+.form textarea {
   width: 100%;
   height: 100%;
   color: #fff;
@@ -371,7 +445,7 @@ body,
   padding-top: 0.2rem;
   line-height: 1rem;
   padding-left: 0.2rem;
-  font-size:small;
+  font-size: small;
   resize: none;
 }
 
@@ -426,7 +500,12 @@ body,
   color: #fff;
 }
 
-
+/* .form input:invalid + .label-name .content-name {
+  transform: translateY(-130%);
+  font-size: 14px;
+  left: 0.3rem;
+  color: #fff;
+} */
 
 .form textarea:focus + .label-name .content-name,
 .form textarea:valid + .label-name .content-name {
