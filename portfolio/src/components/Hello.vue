@@ -265,9 +265,9 @@
         </label>
       </div>
       <div class="form row-start-3 row-end-4 col-start-1 col-end-3">
-        <textarea type="text" name="text" autocomplete="off" required ></textarea>
+        <textarea spellcheck="false" placeholder="Сообщение" type="text" name="text" autocomplete="off" required></textarea>
         <label for="text" class="label-name">
-          <span class="content-name"> Содержание </span>
+          <!-- <span class="content-name"> Содержание </span> -->
         </label>
       </div>
       <button class="row-start-4 row-end-5 col-start-1 col-end-3 bg-white w-[80%]">bruh</button>
@@ -342,6 +342,10 @@ body,
   overflow: hidden;
 }
 
+.form:nth-child(4) {
+  height: 100%;
+}
+
 .form input, .form textarea {
   width: 100%;
   height: 100%;
@@ -351,6 +355,15 @@ body,
   background-color: #484848;
   text-indent: 0.3rem;
 }
+
+.form textarea {
+  padding-top: 0.2rem;
+  line-height: 1rem;
+  padding-left: 0.2rem;
+  font-size:small;
+  resize: none;
+}
+
 .form label {
   position: absolute;
   bottom: 0px;
@@ -358,7 +371,7 @@ body,
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
 }
 .form label::after {
   content: "";
@@ -367,7 +380,7 @@ body,
   left: 0px;
   width: 100%;
   height: 100%;
-  border-bottom: 3px solid;
+  border-bottom: 4px solid;
   border-image: linear-gradient(
       to right,
       #00ff48 0%,
