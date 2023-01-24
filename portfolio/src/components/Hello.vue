@@ -244,13 +244,13 @@
     <div
       v-else
       id="sheet"
-      class="bg-white bg-opacity-0 w-[365px] h-[321px] pb-4 grid grid-cols-2 grid-rows-[1fr_1fr_3fr_1fr] gap-3 place-items-center"
-    >
-      <div class="form mount-anime-name">
-        <input
-          v-model="nameValue"
-          maxlength="15"
-          type="text"
+      class="bg-white bg-opacity-0 w-[365px] h-[321px] pb-4 grid grid-cols-2 grid-rows-[1fr_1fr_3fr_1fr] gap-3 place-items-center relative"
+      >
+    <div class="form mount-anime-name">
+      <input
+      v-model="nameValue"
+      maxlength="15"
+      type="text"
           name="text"
           autocomplete="off"
           required
@@ -302,12 +302,18 @@
           <!-- <span class="content-name"> Содержание </span> -->
         </label>
       </div>
+      
       <button
-        @click="sendForm()"
-        class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700"
+      @click="sendForm()"
+      class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700"
       >
-        Отправить
-      </button>
+      Отправить
+    </button>
+    <Transition name="bot" appear>
+      <div v-if="isForm" id="bot" class="bg-white bg-opacity-20 absolute w-14 aspect-square right-2 top-0 z-10">
+        <img src="../images/bot.png" alt="Bot">
+      </div>
+    </Transition>
     </div>
   </Transition>
   <button
@@ -516,6 +522,19 @@ body,
 
 .fade-enter-from,
 .fade-leave-to {
+  opacity: 0;
+}
+.bot-enter-active {
+  transition: opacity 1s ease;
+  transition-delay: 3s;
+}
+
+.bot-leave-active {
+  transition: opacity 1s ease;
+}
+
+.bot-enter-from,
+.bot-leave-to {
   opacity: 0;
 }
 
