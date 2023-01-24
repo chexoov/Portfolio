@@ -309,11 +309,12 @@
       >
       Отправить
     </button>
-    <Transition name="bot" appear>
-      <div v-if="isForm" id="bot" class="bg-white bg-opacity-20 absolute w-14 aspect-square right-2 top-0 z-10">
+    <!-- <Transition name="bot" appear> -->
+      <div id="bot" class="bg-white bg-opacity-20 absolute w-14 aspect-square right-2 top-0 z-10 bot-animation"
+      >
         <img src="../images/bot.png" alt="Bot">
       </div>
-    </Transition>
+    <!-- </Transition> -->
     </div>
   </Transition>
   <button
@@ -331,6 +332,7 @@ import axios from "axios";
 export default {
   data() {
     return {
+      isBot: false,
       isForm: false,
       nameValue: "",
       subjectValue: "",
@@ -394,6 +396,18 @@ export default {
       return this.isForm ? "Вернуться" : "Напиши мне";
     },
   },
+  watch: {
+    isForm(newState, oldState) {
+      if (this.isBot) {
+        this.isBot = false;
+      }
+      if (newState) {
+        setTimeout(() => {
+          this.isBot = !this.isBot;
+        }, 5000);
+      }
+    }
+  }
 };
 </script>
 
@@ -404,6 +418,29 @@ body,
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+.bot-animation {
+  transform: translateY(-3rem);
+  animation: bot-move 10s ease;
+}
+
+@keyframes bot-move {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3rem);
+  }
+  100% {
+    transform: translateY(-3rem);
+  }
 }
 
 .form {
