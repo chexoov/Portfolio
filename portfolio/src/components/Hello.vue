@@ -270,7 +270,7 @@
           <!-- <span class="content-name"> Содержание </span> -->
         </label>
       </div>
-      <button class="row-start-4 row-end-5 col-start-1 col-end-3 bg-white w-[80%] mount-anime-send">bruh</button>
+      <button class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700 p-1">Отправить</button>
     </div>
   </Transition>
   <button
@@ -413,7 +413,7 @@ body,
   transform: translateY(-130%);
   font-size: 14px;
   left: 0.3rem;
-  color: #fce38a;
+  color: #fff;
 }
 
 
@@ -423,7 +423,7 @@ body,
   transform: translateY(-130%);
   font-size: 14px;
   left: 0.3rem;
-  color: #fce38a;
+  color: #fff;
 }
 .form input:focus + .label-name::after,
 .form input:valid + .label-name::after {
