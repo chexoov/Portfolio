@@ -244,33 +244,33 @@
     <div
       v-else
       id="sheet"
-      class="bg-white bg-opacity-20 w-[365px] h-[321px] pb-4 grid grid-cols-2 grid-rows-[1fr_1fr_3fr_1fr] gap-3 place-items-center"
+      class="bg-white bg-opacity-0 w-[365px] h-[321px] pb-4 grid grid-cols-2 grid-rows-[1fr_1fr_3fr_1fr] gap-3 place-items-center"
     >
-      <div class="form">
+      <div class="form mount-anime-name">
         <input type="text" name="text" autocomplete="off" required />
         <label for="text" class="label-name">
           <span class="content-name"> Имя </span>
         </label>
       </div>
-      <div class="form">
+      <div class="form mount-anime-subject">
         <input type="text" name="text" autocomplete="off" required />
         <label for="text" class="label-name">
           <span class="content-name"> Тема сообщения </span>
         </label>
       </div>
-      <div class="form col-span-2">
+      <div class="form mount-anime-mail col-span-2">
         <input type="text" name="text" autocomplete="off" required />
         <label for="text" class="label-name">
           <span class="content-name"> Почта </span>
         </label>
       </div>
-      <div class="form row-start-3 row-end-4 col-start-1 col-end-3">
+      <div class="form mount-anime-textarea row-start-3 row-end-4 col-start-1 col-end-3">
         <textarea spellcheck="false" placeholder="Сообщение" type="text" name="text" autocomplete="off" required></textarea>
         <label for="text" class="label-name">
           <!-- <span class="content-name"> Содержание </span> -->
         </label>
       </div>
-      <button class="row-start-4 row-end-5 col-start-1 col-end-3 bg-white w-[80%]">bruh</button>
+      <button class="row-start-4 row-end-5 col-start-1 col-end-3 bg-white w-[80%] mount-anime-send">bruh</button>
     </div>
   </Transition>
   <button
@@ -502,10 +502,31 @@ body,
     min-width: 196px;
   }
 }
-.mount-anime {
+.mount-anime-name {
   /* animation-delay: 3s; */
   opacity: 1;
-  animation: mount-move 3s ease;
+  animation: mount-move 1.5s ease;
+}
+.mount-anime-subject {
+  /* animation-delay: 3s; */
+  opacity: 1;
+  animation: mount-move 1.7s ease;
+}
+.mount-anime-mail {
+  /* animation-delay: 3s; */
+  opacity: 1;
+  animation: mount-move 2s ease;
+}
+.mount-anime-textarea {
+  /* animation-delay: 3s; */
+  opacity: 1;
+  animation: mount-move 2.2s ease;
+}
+
+.mount-anime-send {
+  /* animation-delay: 3s; */
+  opacity: 1;
+  animation: mount-move 2.5s ease;
 }
 
 .mount-anime-btn {
