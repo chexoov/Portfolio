@@ -315,7 +315,7 @@
         class="bg-white bg-opacity-0 absolute w-[80%] h-[3.7rem] right-2 top-0 z-0 bot-animation grid grid-cols-[4fr_1fr]"
       >
         <div id="messagebox" class="bg-white h-10 message-borders w-[95%] flex items-center bot-message-anime">
-          <p class="px-1">Привет, я телеграм-бот, бип</p>
+          <p class="px-2 leading-[1rem]">Привет, я помогу тебе заполнить форму, бип.</p>
         </div>
         <img
           src="../images/bot.png"
