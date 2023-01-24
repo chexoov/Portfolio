@@ -245,12 +245,12 @@
       v-else
       id="sheet"
       class="bg-white bg-opacity-0 w-[365px] h-[321px] pb-4 grid grid-cols-2 grid-rows-[1fr_1fr_3fr_1fr] gap-3 place-items-center relative"
-      >
-    <div class="form mount-anime-name">
-      <input
-      v-model="nameValue"
-      maxlength="15"
-      type="text"
+    >
+      <div class="form mount-anime-name">
+        <input
+          v-model="nameValue"
+          maxlength="15"
+          type="text"
           name="text"
           autocomplete="off"
           required
@@ -302,19 +302,28 @@
           <!-- <span class="content-name"> Содержание </span> -->
         </label>
       </div>
-      
+
       <button
-      @click="sendForm()"
-      class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700"
+        @click="sendForm()"
+        class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700"
       >
-      Отправить
-    </button>
-    <!-- <Transition name="bot" appear> -->
-      <div id="bot" class="bg-white bg-opacity-20 absolute w-14 aspect-square right-2 top-0 z-10 bot-animation"
+        Отправить
+      </button>
+      <!-- <Transition name="bot" appear> -->
+      <div
+        id="bot"
+        class="bg-white bg-opacity-20 absolute w-[80%] h-[3.7rem] right-2 top-0 z-10 bot-animation grid grid-cols-[4fr_1fr]"
       >
-        <img src="../images/bot.png" alt="Bot">
+        <div id="messagebox" class="bg-white h-10 message-borders w-[95%] flex items-center bot-message-anime">
+          <p class="px-1">Привет, я телеграм-бот, бип</p>
+        </div>
+        <img
+          src="../images/bot.png"
+          alt="Bot"
+          class="object-contain h-[100%] col-start-2 col-end-3"
+        />
       </div>
-    <!-- </Transition> -->
+      <!-- </Transition> -->
     </div>
   </Transition>
   <button
@@ -332,7 +341,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      isBot: false,
+      // isBot: false,
       isForm: false,
       nameValue: "",
       subjectValue: "",
@@ -384,10 +393,10 @@ export default {
           .catch(function (error) {
             console.error(error);
           });
-        this.nameValue = '';
-        this.subjectValue = '';
-        this.emailValue = '';
-        this.textareaValue = '';
+        this.nameValue = "";
+        this.subjectValue = "";
+        this.emailValue = "";
+        this.textareaValue = "";
       }
     },
   },
@@ -396,18 +405,18 @@ export default {
       return this.isForm ? "Вернуться" : "Напиши мне";
     },
   },
-  watch: {
-    isForm(newState, oldState) {
-      if (this.isBot) {
-        this.isBot = false;
-      }
-      if (newState) {
-        setTimeout(() => {
-          this.isBot = !this.isBot;
-        }, 5000);
-      }
-    }
-  }
+  // watch: {
+  //   isForm(newState, oldState) {
+  //     if (this.isBot) {
+  //       this.isBot = false;
+  //     }
+  //     if (newState) {
+  //       setTimeout(() => {
+  //         this.isBot = !this.isBot;
+  //       }, 5000);
+  //     }
+  //   },
+  // },
 };
 </script>
 
@@ -420,8 +429,12 @@ body,
   margin: 0;
 }
 
+.message-borders {
+  border-radius: 1rem 1rem 0 1rem;
+}
+
 .bot-animation {
-  transform: translateY(-3rem);
+  transform: translateY(-2.9rem);
   animation: bot-move 10s ease;
 }
 
@@ -434,12 +447,37 @@ body,
     opacity: 0;
     transform: translateY(0);
   }
+  40% {
+    transform: translateY(0);
+  }
   50% {
     opacity: 1;
-    transform: translateY(-3rem);
+    transform: translateY(-2.9rem);
   }
   100% {
-    transform: translateY(-3rem);
+    transform: translateY(-2.9rem);
+  }
+}
+
+.bot-message-anime {
+  /* transform: translateX(100px) translateY(15px) scale(10%) ; */
+  transition-property: all;
+  /* transition: 1s ease; */
+  animation: bot-message-move 10s ease;
+  /* width: 95%; */
+}
+
+@keyframes bot-message-move {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(100px) translateY(15px) scale(10%);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(100%);
   }
 }
 
@@ -559,19 +597,6 @@ body,
 
 .fade-enter-from,
 .fade-leave-to {
-  opacity: 0;
-}
-.bot-enter-active {
-  transition: opacity 1s ease;
-  transition-delay: 3s;
-}
-
-.bot-leave-active {
-  transition: opacity 1s ease;
-}
-
-.bot-enter-from,
-.bot-leave-to {
   opacity: 0;
 }
 
