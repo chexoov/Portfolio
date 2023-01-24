@@ -247,30 +247,30 @@
       class="bg-white bg-opacity-0 w-[365px] h-[321px] pb-4 grid grid-cols-2 grid-rows-[1fr_1fr_3fr_1fr] gap-3 place-items-center"
     >
       <div class="form mount-anime-name">
-        <input type="text" name="text" autocomplete="off" required />
+        <input v-model="nameValue" maxlength="15" type="text" name="text" autocomplete="off" required />
         <label for="text" class="label-name">
           <span class="content-name"> Имя </span>
         </label>
       </div>
       <div class="form mount-anime-subject">
-        <input type="text" name="text" autocomplete="off" required />
+        <input v-model="subjectValue" maxlength="18" type="text" name="text" autocomplete="off" required />
         <label for="text" class="label-name">
           <span class="content-name"> Тема сообщения </span>
         </label>
       </div>
       <div class="form mount-anime-mail col-span-2">
-        <input type="text" name="text" autocomplete="off" required />
+        <input v-model="emailValue" type="text" name="text" autocomplete="off" required />
         <label for="text" class="label-name">
           <span class="content-name"> Почта </span>
         </label>
       </div>
       <div class="form mount-anime-textarea row-start-3 row-end-4 col-start-1 col-end-3">
-        <textarea spellcheck="false" placeholder="Сообщение" type="text" name="text" autocomplete="off" required></textarea>
+        <textarea v-model="textareaValue" spellcheck="false" placeholder="Сообщение" type="text" name="text" autocomplete="off" required></textarea>
         <label for="text" class="label-name">
           <!-- <span class="content-name"> Содержание </span> -->
         </label>
       </div>
-      <button class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700">Отправить</button>
+      <button @click="check()" class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700">Отправить</button>
     </div>
   </Transition>
   <button
@@ -311,12 +311,22 @@ export default {
   data() {
     return {
       isForm: false,
+      nameValue: '',
+      subjectValue: '',
+      emailValue: '',
+      textareaValue: '',
     };
   },
   methods: {
     changeState(): void {
       this.isForm = !this.isForm;
     },
+    check() {
+      console.log(this.nameValue)
+      console.log(this.subjectValue)
+      console.log(this.emailValue)
+      console.log(this.textareaValue)
+    }
   },
   computed: {
     btnState() {
