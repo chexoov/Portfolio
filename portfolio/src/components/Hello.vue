@@ -270,7 +270,7 @@
           <!-- <span class="content-name"> Содержание </span> -->
         </label>
       </div>
-      <button class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700 p-1">Отправить</button>
+      <button class="row-start-4 row-end-5 col-start-1 col-end-3 bg-sky-500 bg-opacity-1 transition-all w-[100%] mount-anime-send rounded-[0.5rem] text-white hover:bg-sky-700">Отправить</button>
     </div>
   </Transition>
   <button

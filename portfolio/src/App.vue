@@ -3,7 +3,7 @@
     <div id="hello" class="">
       <Hello />
     </div>
-    <div id="cards" class=" bg-[#ffffff22] h-[100%] w-[100%]">
+    <div id="cards" class=" bg-[#000] h-[100%] w-[100%]">
       <Cards />
     </div>
 
@@ -20,7 +20,7 @@ export default {
   components: {
     Hello,
     Cards
-  }
+  },
 }
 
 </script>
