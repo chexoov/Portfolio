@@ -31,6 +31,30 @@
         </p>
       </div>
       <div
+        id="littleCardBots"
+        class="transition squareTransitionFunc duration-[5s] z-[15]  w-20 aspect-square rounded-xl absolute"
+        :class="{
+          'translate-x-[-12rem] translate-y-[-15rem] rotate-[8deg] hover:scale-110 duration-[1s] cursor-pointer ':
+            isClicked,
+          'delay-[0ms]': isOnPosition,
+          'delay-[2s]': !isOnPosition && isClicked,
+        }"
+      >
+          <img
+          @mouseover.capture="changeBotHoverState()"
+          @mouseleave.capture="changeBotHoverState()"
+            src="../images/bot.png"
+            class="h-[100%] w-[100%]"
+            alt="GitHub"
+          />
+        <p
+          class="text-white absolute transition translate-y-[-4rem] z-[-1] text-sm pl-2"
+          :class="{ ' translate-x-[-4rem]': isBotSquareHovered }"
+        >
+          Телеграм боты
+        </p>
+      </div>
+      <div
         id="littleCardTs"
         class="transition squareTransitionFunc duration-[5s] z-[35] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute"
         :class="{
@@ -171,8 +195,6 @@
       ></div>
       <div
         id="littleCardCheckers"
-        @mouseover.capture="changeCheckerSquareState()"
-        @mouseleave.capture="changeCheckerSquareState()"
         class="transition squareTransitionFunc duration-[5s] z-[15] bg-[#ffffff27] w-20 aspect-square rounded-xl absolute grid place-items-center"
         :class="{
           'translate-x-[7rem] translate-y-[15rem] rotate-[-12deg] hover:scale-110 duration-[1s] cursor-pointer ':
@@ -183,6 +205,8 @@
       >
         <a href="https://checkers-1bbc2.web.app/" target="_blank">
           <img
+          @mouseover.capture="changeCheckerSquareState()"
+          @mouseleave.capture="changeCheckerSquareState()"
             src="../images/checkers.png"
             alt="Checkers"
             class="h-[100%] w-[100%] rounded-2xl"
@@ -251,6 +275,7 @@ export default {
       isOnPosition: false,
       isGitSquareHovered: false,
       isCheckersSquareHovered: false,
+      isBotSquareHovered: false,
     };
   },
   computed: {
@@ -264,6 +289,9 @@ export default {
     },
     changeSquareHoverState() {
       this.isGitSquareHovered = !this.isGitSquareHovered;
+    },
+    changeBotHoverState() {
+      this.isBotSquareHovered = !this.isBotSquareHovered;
     },
     changePositionState() {
       this.isOnPosition = !this.isOnPosition;
