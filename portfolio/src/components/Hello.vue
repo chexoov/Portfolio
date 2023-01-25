@@ -1,5 +1,5 @@
 <template>
-  <Transition name="fade" mode="out-in" appear>
+  <Transition name="" mode="out-in" appear>
     <div v-if="!isForm" class="hello-parent flex flex-col">
       <svg class="hello-word" width="365" height="277" viewBox="0 0 365 277">
         <g id="H-letter">
