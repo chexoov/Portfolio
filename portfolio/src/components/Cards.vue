@@ -359,22 +359,16 @@ export default {
 }
 
 .mount-cards {
-  /* opacity: 0; */
+  opacity: 0;
   /* transition: opacity 1s ease; */
   /* opacity: 1; */
-  animation: mount-cards 10s ease;
-  /* animation-delay: 3s; */
+  animation: mount-cards 1s ease;
+  animation-delay: 3s;
 }
 
 @keyframes mount-cards {
   0% {
     opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
   }
   100% {
     opacity: 1;

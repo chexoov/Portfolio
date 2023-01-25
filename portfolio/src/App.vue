@@ -1,9 +1,9 @@
 <template>
   <div id="screen" class="h-[100vh] bg-black grid grid-cols-[5fr_7fr] place-items-center">
-    <div id="hello" class="hello-load">
+    <div id="hello">
       <Hello />
     </div>
-    <div id="cards" class=" bg-[#000] h-[100%] w-[100%] cards-load">
+    <div id="cards" class=" bg-[#000] h-[100%] w-[100%]" :class="{'opacity-100': isCardsMounted}">
       <Cards />
     </div>
 
@@ -29,7 +29,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.isCardsMounted = !this.isCardsMounted;
-    }, 4000);
+    }, 3000);
   }
 }
 
@@ -37,37 +37,14 @@ export default {
 
 
 <style>
-.hello-load {
-  animation: hello-appear 5s ease;
-}
-
-@keyframes hello-appear {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .cards-load {
-  animation: cards-appear 5s ease;
+  animation: cards-appear 1s ease;
+  animation-delay: 3s;
+  /* opacity: 0; */
 }
 @keyframes cards-appear {
   0% {
     opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
   }
   100% {
     opacity: 1;
