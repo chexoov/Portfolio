@@ -309,7 +309,6 @@
       >
         Отправить
       </button>
-      <!-- <Transition name="bot" appear> -->
       <div
         id="bot"
         class="bg-white bg-opacity-0 absolute w-[80%] h-[3.7rem] right-2 top-0 z-0 bot-animation grid grid-cols-[4fr_1fr]"
@@ -320,10 +319,9 @@
         <img
           src="../images/bot.png"
           alt="Bot"
-          class="object-contain h-[100%] col-start-2 col-end-3"
+          class="object-contain w-[100%] col-start-2 col-end-3"
         />
       </div>
-      <!-- </Transition> -->
     </div>
   </Transition>
   <button
