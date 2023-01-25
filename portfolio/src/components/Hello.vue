@@ -315,7 +315,7 @@
         class="bg-white bg-opacity-0 absolute w-[80%] h-[3.7rem] right-2 top-0 z-0 bot-animation grid grid-cols-[4fr_1fr]"
       >
         <div id="messagebox" class="bg-white h-10 message-borders w-[95%] flex items-center bot-message-anime">
-          <p class="px-2 leading-[1rem]">Привет, я помогу тебе заполнить форму, бип.</p>
+          <p class="px-2 leading-[1rem]">{{ botResponse }}</p>
         </div>
         <img
           src="../images/bot.png"
@@ -347,11 +347,39 @@ export default {
       subjectValue: "",
       emailValue: "",
       textareaValue: "",
+      isSendButtonClicked: false,
+      botResponse: 'Привет, я помогу тебе заполнить форму, бип.'
     };
   },
   methods: {
     changeState(): void {
       this.isForm = !this.isForm;
+    },
+    changeSendButtonState() {
+      if (!this.isSendButtonClicked) {
+        this.isSendButtonClicked = !this.isSendButtonClicked;
+        // setTimeout(() => {
+        //   this.isSendButtonClicked = !this.isSendButtonClicked;
+        // }, 1000);
+      }
+    },
+    botResponseOptions() {
+      const emailCheck = this.emailValue.split("@").length;
+      if (
+        this.nameValue &&
+        this.textareaValue &&
+        this.subjectValue &&
+        emailCheck !== 2 &&
+        this.isSendButtonClicked
+        ) return 'Попробуй формат почты example@index.ru'
+        else if(
+        this.nameValue &&
+        this.textareaValue &&
+        this.subjectValue &&
+        emailCheck === 2 &&
+        this.isSendButtonClicked
+      ) return 'Готово! Я отправил все создателю.'
+      return 'Заполни все поля.'
     },
     check() {
       console.log(this.nameValue);
@@ -362,6 +390,8 @@ export default {
       console.log(this.textareaValue);
     },
     sendForm() {
+      this.changeSendButtonState();
+      this.botResponse = this.botResponseOptions();
       const emailCheck = this.emailValue.split("@").length;
       if (
         emailCheck === 2 &&
@@ -405,18 +435,6 @@ export default {
       return this.isForm ? "Вернуться" : "Напиши мне";
     },
   },
-  // watch: {
-  //   isForm(newState, oldState) {
-  //     if (this.isBot) {
-  //       this.isBot = false;
-  //     }
-  //     if (newState) {
-  //       setTimeout(() => {
-  //         this.isBot = !this.isBot;
-  //       }, 5000);
-  //     }
-  //   },
-  // },
 };
 </script>
 
