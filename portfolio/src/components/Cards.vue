@@ -31,13 +31,13 @@
         </p>
       </div>
       <div
-        id="littleCardBots"
+        id="littleCardBot"
         class="transition squareTransitionFunc duration-[5s] z-[15]  w-20 aspect-square rounded-xl absolute"
         :class="{
           'translate-x-[-12rem] translate-y-[-15rem] rotate-[8deg] hover:scale-110 duration-[1s] cursor-pointer ':
             isClicked,
           'delay-[0ms]': isOnPosition,
-          'delay-[2s]': !isOnPosition && isClicked,
+          'delay-[1.8s]': !isOnPosition && isClicked,
         }"
       >
           <img
@@ -205,8 +205,8 @@
       >
         <a href="https://checkers-1bbc2.web.app/" target="_blank">
           <img
-          @mouseover.capture="changeCheckerSquareState()"
-          @mouseleave.capture="changeCheckerSquareState()"
+            @mouseover.capture="changeCheckerSquareState()"
+            @mouseleave.capture="changeCheckerSquareState()"
             src="../images/checkers.png"
             alt="Checkers"
             class="h-[100%] w-[100%] rounded-2xl"
@@ -281,7 +281,7 @@ export default {
   computed: {
     mountedGetter() {
       return this.isMounted ? true : false;
-    }
+    },
   },
   methods: {
     changeHoverState() {
