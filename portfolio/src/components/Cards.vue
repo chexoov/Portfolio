@@ -309,6 +309,7 @@ export default {
         }, 5200);
       }
       this.isClicked = !this.isClicked;
+      console.log('now it\'s', this.isClicked)
     },
   },
   mounted() {

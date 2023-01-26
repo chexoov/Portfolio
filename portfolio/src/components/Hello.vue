@@ -313,7 +313,10 @@
         id="bot"
         class="bg-white bg-opacity-0 absolute w-[80%] h-[3.7rem] right-2 top-0 z-0 bot-animation grid grid-cols-[4fr_1fr]"
       >
-        <div id="messagebox" class="bg-white h-10 message-borders w-[95%] flex items-center bot-message-anime">
+        <div
+          id="messagebox"
+          class="bg-white h-10 message-borders w-[95%] flex items-center bot-message-anime"
+        >
           <p class="px-2 leading-[1rem]">{{ botResponse }}</p>
         </div>
         <img
@@ -346,12 +349,18 @@ export default {
       emailValue: "",
       textareaValue: "",
       isSendButtonClicked: false,
-      botResponse: 'Привет, я помогу тебе заполнить форму, бип.'
+      botResponse: "Привет, я помогу тебе заполнить форму, бип.",
     };
   },
   methods: {
     changeState(): void {
       this.isForm = !this.isForm;
+    },
+    inputClean() {
+      this.nameValue = "";
+      this.subjectValue = "";
+      this.emailValue = "";
+      this.textareaValue = "";
     },
     changeSendButtonState() {
       if (!this.isSendButtonClicked) {
@@ -359,6 +368,32 @@ export default {
         // setTimeout(() => {
         //   this.isSendButtonClicked = !this.isSendButtonClicked;
         // }, 1000);
+      }
+    },
+    async sendRequest() {
+      try {
+        const options = {
+          method: "POST",
+          url: "https://api.telegram.org/bot5847470412%3AAAHs4sky2p9-PFyrz7v98nhCTRoYLRm6rSM/sendMessage",
+          headers: {
+            accept: "application/json",
+            "content-type": "application/json",
+          },
+          data: {
+            text: `<b>Name:</b>\n${this.nameValue}\n<b>Subject:</b>\n${this.subjectValue}\n<b>Email:</b>\n${this.emailValue}\n<b>Text:</b>\n${this.textareaValue}`,
+            disable_web_page_preview: false,
+            disable_notification: false,
+            parse_mode: "HTML",
+            reply_to_message_id: null,
+            chat_id: "602753868",
+          },
+        };
+
+        await axios.request(options);
+        this.inputClean();
+      } catch (error) {
+        console.log(error);
+        this.botResponse = "Что-то сломалось! Проверь интернет.";
       }
     },
     botResponseOptions() {
@@ -369,15 +404,17 @@ export default {
         this.subjectValue &&
         emailCheck !== 2 &&
         this.isSendButtonClicked
-        ) return 'Попробуй формат почты example@index.ru'
-        else if(
+      )
+        return "Попробуй формат почты example@index.ru";
+      else if (
         this.nameValue &&
         this.textareaValue &&
         this.subjectValue &&
         emailCheck === 2 &&
         this.isSendButtonClicked
-      ) return 'Готово! Я отправил все создателю.'
-      return 'Заполни все поля.'
+      )
+        return "Готово! Я отправил все создателю.";
+      return "Заполни все поля.";
     },
     check() {
       console.log(this.nameValue);
@@ -397,34 +434,32 @@ export default {
         this.textareaValue &&
         this.subjectValue
       ) {
-        const options = {
-          method: "POST",
-          url: "https://api.telegram.org/bot5847470412%3AAAHs4sky2p9-PFyrz7v98nhCTRoYLRm6rSM/sendMessage",
-          headers: {
-            accept: "application/json",
-            "content-type": "application/json",
-          },
-          data: {
-            text: `<b>Name:</b>\n${this.nameValue}\n<b>Subject:</b>\n${this.subjectValue}\n<b>Email:</b>\n${this.emailValue}\n<b>Text:</b>\n${this.textareaValue}`,
-            disable_web_page_preview: false,
-            disable_notification: false,
-            parse_mode: "HTML",
-            reply_to_message_id: null,
-            chat_id: "602753868",
-          },
-        };
-        axios
-          .request(options)
-          .then(function (response) {
-            console.log(response.data);
-          })
-          .catch(function (error) {
-            console.error(error);
-          });
-        this.nameValue = "";
-        this.subjectValue = "";
-        this.emailValue = "";
-        this.textareaValue = "";
+        this.sendRequest();
+        // const options = {
+        //   method: "POST",
+        //   url: "https://api.telegram.org/bot5847470412%3AAAHs4sky2p9-PFyrz7v98nhCTRoYLRm6rSM/sendMessage",
+        //   headers: {
+        //     accept: "application/json",
+        //     "content-type": "application/json",
+        //   },
+        //   data: {
+        //     text: `<b>Name:</b>\n${this.nameValue}\n<b>Subject:</b>\n${this.subjectValue}\n<b>Email:</b>\n${this.emailValue}\n<b>Text:</b>\n${this.textareaValue}`,
+        //     disable_web_page_preview: false,
+        //     disable_notification: false,
+        //     parse_mode: "HTML",
+        //     reply_to_message_id: null,
+        //     chat_id: "602753868",
+        //   },
+        // };
+        // axios
+        //   .request(options)
+        //   .then(function (response) {
+        //     console.log(response.data);
+        //   })
+        //   .catch(function (error) {
+        //     console.error(error);
+        //   });
+
       }
     },
   },
