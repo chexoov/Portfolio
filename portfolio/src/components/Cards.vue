@@ -229,7 +229,7 @@
         @mouseover="changeHoverState()"
         @mouseleave="changeHoverState()"
       >
-      <p class=" break-words p-2">asdasdasdasdasdsadasdddddddddddddddasdddddd</p>
+      <p class=" break-words p-2 marquee">asdasdasdasdasdsadasdddddddddddddddasdddddd</p>
     </div>
       <div
         class="z-20 transition duration-500 bg-[#00ff48] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
@@ -361,21 +361,11 @@ export default {
   background-size: contain;
 }
 
-.mount-cards {
-  opacity: 0;
-  /* transition: opacity 1s ease; */
-  /* opacity: 1; */
-  animation: mount-cards 1s ease;
-  animation-delay: 3s;
+.marquee {
+
 }
 
-@keyframes mount-cards {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+@keyframes marquee-move {
+  
 }
-
 </style>

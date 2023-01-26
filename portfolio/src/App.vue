@@ -43,7 +43,7 @@ export default {
 .cards-load {
   animation: cards-appear 1s ease forwards;
   animation-delay: 3s;
-  opacity: 0;
+  opacity: 0.01;
 }
 @keyframes cards-appear {
   0% {
