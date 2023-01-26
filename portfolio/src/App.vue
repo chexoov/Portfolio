@@ -1,40 +1,43 @@
 <template>
-  <div id="screen" class="h-[100vh] bg-black grid grid-cols-[5fr_7fr] place-items-center">
+  <div
+    id="screen"
+    class="h-[100vh] bg-black grid grid-cols-[5fr_7fr] place-items-center"
+  >
     <div id="hello">
       <Hello />
     </div>
-    <div id="cards" class=" bg-[#000] h-[100%] w-[100%]" :class="{'opacity-100': isCardsMounted}">
+    <div
+      id="cards"
+      class="bg-[#000] h-[100%] w-[100%] opacity-[0.01] transition"
+      :class="{ 'opacity-[1] delay-[3s] duration-1000': isCardsMounted }"
+    >
       <Cards />
     </div>
-
   </div>
 </template>
 
-
 <script lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import Hello from './components/Hello.vue';
-import Cards from './components/Cards.vue';
+import Hello from "./components/Hello.vue";
+import Cards from "./components/Cards.vue";
 
 export default {
   components: {
     Hello,
-    Cards
+    Cards,
   },
   data() {
     return {
       isCardsMounted: false,
-    }
+    };
   },
   mounted() {
     setTimeout(() => {
-      this.isCardsMounted = !this.isCardsMounted;
-    }, 3000);
-  }
-}
-
+      this.isCardsMounted = true;
+    }, 10);
+  },
+};
 </script>
-
 
 <style>
 .cards-load {
@@ -50,5 +53,4 @@ export default {
     opacity: 1;
   }
 }
-
 </style>
