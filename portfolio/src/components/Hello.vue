@@ -1,6 +1,6 @@
 <template>
   <Transition name="fade" mode="out-in" appear>
-    <div v-if="!isForm" class="hello-parent flex flex-col">
+    <div v-if="!isForm" class="hello-parent flex flex-col" key="Hello">
       <svg class="hello-word" width="365" height="277" viewBox="0 0 365 277">
         <g id="H-letter">
           <line
@@ -1176,4 +1176,5 @@ body,
     stroke-dashoffset: 0;
   }
 }
+
 </style>

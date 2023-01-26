@@ -230,6 +230,7 @@
         @mouseleave="changeHoverState()"
       >
       <p class=" break-words p-2 marquee">asdasdasdasdasdsadasdddddddddddddddasdddddd</p>
+      <img src="../images/card_gif.gif" alt="">
     </div>
       <div
         class="z-20 transition duration-500 bg-[#00ff48] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
