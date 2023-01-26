@@ -237,7 +237,7 @@
           />
         </g>
       </svg>
-      <p class="text-white tracking-[0.3rem] text-lg pt-4 mount-anime">
+      <p class="text-white tracking-[0.3rem] text-lg pt-4 mount-anime pointer-events-none">
         Web-developer / Freelancer
       </p>
     </div>
@@ -435,31 +435,6 @@ export default {
         this.subjectValue
       ) {
         this.sendRequest();
-        // const options = {
-        //   method: "POST",
-        //   url: "https://api.telegram.org/bot5847470412%3AAAHs4sky2p9-PFyrz7v98nhCTRoYLRm6rSM/sendMessage",
-        //   headers: {
-        //     accept: "application/json",
-        //     "content-type": "application/json",
-        //   },
-        //   data: {
-        //     text: `<b>Name:</b>\n${this.nameValue}\n<b>Subject:</b>\n${this.subjectValue}\n<b>Email:</b>\n${this.emailValue}\n<b>Text:</b>\n${this.textareaValue}`,
-        //     disable_web_page_preview: false,
-        //     disable_notification: false,
-        //     parse_mode: "HTML",
-        //     reply_to_message_id: null,
-        //     chat_id: "602753868",
-        //   },
-        // };
-        // axios
-        //   .request(options)
-        //   .then(function (response) {
-        //     console.log(response.data);
-        //   })
-        //   .catch(function (error) {
-        //     console.error(error);
-        //   });
-
       }
     },
   },
@@ -478,6 +453,10 @@ body,
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+*, *::after, *::before {
+  user-select: none;
 }
 
 .message-borders {
