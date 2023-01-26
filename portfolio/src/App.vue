@@ -8,8 +8,8 @@
     </div>
     <div
       id="cards"
-      class="bg-[#000] h-[100%] w-[100%] opacity-[0.01] transition"
-      :class="{ 'opacity-[1] delay-[3s] duration-1000': isCardsMounted }"
+      class="bg-[#000] h-[100%] w-[100%] opacity-[0.01] transition ease-in-out scale-[90%]"
+      :class="{ 'scale-[100%] opacity-[1] delay-[3s] duration-1000 ': isCardsMounted }"
     >
       <Cards />
     </div>
