@@ -220,7 +220,7 @@
         </p>
       </div>
       <div
-        class="z-10 transition duration-500 bg-[#0055ff] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
+        class="z-10 transition duration-500 bg-[#0055ff] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1 border-white border"
         :class="{
           'scale-105': isHovered,
           '-translate-x-[8rem] translate-y-[1rem] rotate-[-20deg]': isClicked,
@@ -229,8 +229,8 @@
         @mouseover="changeHoverState()"
         @mouseleave="changeHoverState()"
       >
-      <p class=" break-words p-2 marquee">asdasdasdasdasdsadasdddddddddddddddasdddddd</p>
-      <img src="../images/card_gif.gif" alt="">
+      <!-- <p class=" break-words p-2 marquee">asdasdasdasdasdsadasdddddddddddddddasdddddd</p> -->
+      <img src="../images/card_gif.gif" alt="gif" class="h-[100%] rounded-2xl">
     </div>
       <div
         class="z-20 transition duration-500 bg-[#00ff48] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
