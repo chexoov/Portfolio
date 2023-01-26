@@ -8,8 +8,8 @@
     </div>
     <div
       id="cards"
-      class="bg-[#000] h-[100%] w-[100%] opacity-[0.01] transition ease-in-out scale-[90%]"
-      :class="{ 'scale-[100%] opacity-[1] delay-[3s] duration-1000 ': isCardsMounted }"
+      class="bg-[#000] h-[100%] w-[100%] transition ease-in-out cards-load "
+      
     >
       <Cards />
     </div>
@@ -41,9 +41,9 @@ export default {
 
 <style>
 .cards-load {
-  animation: cards-appear 1s ease;
+  animation: cards-appear 1s ease forwards;
   animation-delay: 3s;
-  /* opacity: 0; */
+  opacity: 0;
 }
 @keyframes cards-appear {
   0% {
