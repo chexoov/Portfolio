@@ -1,7 +1,7 @@
 <template>
     <div
       id="cardGroup"
-      class="bg-black bg-opacity-0 h-[100%] w-[100%] grid place-items-center transition duration-1000 select-none relative"
+      class="bg-black bg-opacity-0 h-[100%] w-[100%] grid place-items-center transition duration-1000 select-none relative max-md:scale-50"
       
     >
       <div

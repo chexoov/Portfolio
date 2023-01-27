@@ -1,14 +1,14 @@
 <template>
   <div
     id="screen"
-    class="h-[100vh] bg-black grid grid-cols-[5fr_7fr] place-items-center"
+    class="h-[100vh] bg-black grid md:grid-cols-[5fr_7fr] place-items-center max-md:grid-rows-[100vh_100vh]"
   >
     <div id="hello">
       <Hello />
     </div>
     <div
       id="cards"
-      class="bg-[#000] h-[100%] w-[100%] transition ease-in-out cards-load "
+      class="bg-[#000] h-[100%] w-[100%] transition ease-in-out cards-load"
       
     >
       <Cards />
