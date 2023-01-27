@@ -42,6 +42,7 @@ export default {
 <style>
 html {
   background-color: black;
+
 }
 
 body::-webkit-scrollbar {
@@ -68,4 +69,5 @@ body {
     opacity: 1;
   }
 }
+
 </style>
