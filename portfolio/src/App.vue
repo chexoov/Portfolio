@@ -40,6 +40,21 @@ export default {
 </script>
 
 <style>
+html {
+  background-color: black;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
 .cards-load {
   animation: cards-appear 1s ease forwards;
   animation-delay: 3s;

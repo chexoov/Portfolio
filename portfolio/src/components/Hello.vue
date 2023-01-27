@@ -297,6 +297,7 @@
           name="text"
           autocomplete="off"
           required
+          class=" max-md:text-[16px]"
         ></textarea>
         <label for="text" class="label-name">
           <!-- <span class="content-name"> Содержание </span> -->
@@ -578,6 +579,12 @@ body,
   padding-left: 0.2rem;
   font-size: small;
   resize: none;
+}
+
+@media (max-width: 768px) {
+  .form textarea {
+  font-size: 16px;
+  }
 }
 
 .form label {
