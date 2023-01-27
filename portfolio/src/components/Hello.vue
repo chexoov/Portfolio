@@ -456,7 +456,10 @@ body,
 }
 
 *, *::after, *::before {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .message-borders {
@@ -465,7 +468,28 @@ body,
 
 .bot-animation {
   transform: translateY(-3.4rem);
-  animation: bot-move 10s ease;
+  -webkit-animation: bot-move 10s ease;
+          animation: bot-move 10s ease;
+}
+
+@-webkit-keyframes bot-move {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3.4rem);
+    opacity: 1;
+  }
+  50% {
+  }
+  100% {
+    transform: translateY(-3.4rem);
+  }
 }
 
 @keyframes bot-move {
@@ -492,8 +516,23 @@ body,
   /* transform: translateX(100px) translateY(15px) scale(10%) ; */
   transition-property: all;
   /* transition: 1s ease; */
-  animation: bot-message-move 10s ease;
+  -webkit-animation: bot-message-move 10s ease;
+          animation: bot-message-move 10s ease;
   /* width: 95%; */
+}
+
+@-webkit-keyframes bot-message-move {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    transform: translateX(100px) translateY(15px) scale(10%);
+  }
+  45% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(100%);
+  }
 }
 
 @keyframes bot-message-move {
@@ -558,7 +597,15 @@ body,
   width: 100%;
   height: 100%;
   border-bottom: 4px solid;
-  border-image: linear-gradient(
+  -o-border-image: linear-gradient(
+      to right,
+      #00ff48 0%,
+      #f9f942 25%,
+      #ff003c 50%,
+      #0055ff 90%
+    )
+    5;
+     border-image: linear-gradient(
       to right,
       #00ff48 0%,
       #f9f942 25%,
@@ -652,7 +699,9 @@ body,
   min-width: 140px;
   padding: 3px;
   text-decoration: none;
-  user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
@@ -687,33 +736,58 @@ body,
 .mount-anime-name {
   /* animation-delay: 3s; */
   opacity: 1;
-  animation: mount-move 1.5s ease;
+  -webkit-animation: mount-move 1.5s ease;
+          animation: mount-move 1.5s ease;
 }
 .mount-anime-subject {
   /* animation-delay: 3s; */
   opacity: 1;
-  animation: mount-move 1.7s ease;
+  -webkit-animation: mount-move 1.7s ease;
+          animation: mount-move 1.7s ease;
 }
 .mount-anime-mail {
   /* animation-delay: 3s; */
   opacity: 1;
-  animation: mount-move 2s ease;
+  -webkit-animation: mount-move 2s ease;
+          animation: mount-move 2s ease;
 }
 .mount-anime-textarea {
   /* animation-delay: 3s; */
   opacity: 1;
-  animation: mount-move 2.2s ease;
+  -webkit-animation: mount-move 2.2s ease;
+          animation: mount-move 2.2s ease;
 }
 
 .mount-anime-send {
   /* animation-delay: 3s; */
   opacity: 1;
-  animation: mount-move 2.5s ease;
+  -webkit-animation: mount-move 2.5s ease;
+          animation: mount-move 2.5s ease;
 }
 
 .mount-anime-btn {
   /* opacity: 1; */
-  animation: mount-move 4s ease;
+  -webkit-animation: mount-move 4s ease;
+          animation: mount-move 4s ease;
+}
+
+@-webkit-keyframes mount-move {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  60% {
+    /* transform: translateY(5px); */
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes mount-move {
@@ -754,25 +828,42 @@ body,
 .H-left-stroke {
   stroke-dasharray: 87px;
   /* stroke-dashoffset: 124; */
-  animation: H-left-move 20s ease forwards;
+  -webkit-animation: H-left-move 20s ease forwards;
+          animation: H-left-move 20s ease forwards;
 }
 
 .H-mid-stroke-delayed {
   stroke-dasharray: 67px;
   stroke-dashoffset: 67px;
-  animation: H-mid-move 20s ease forwards;
-  animation-delay: 0.5s;
+  -webkit-animation: H-mid-move 20s ease forwards;
+          animation: H-mid-move 20s ease forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .H-mid-stroke {
   stroke-dasharray: 67px;
   stroke-dashoffset: 67px;
-  animation: H-mid-move 20s ease forwards;
+  -webkit-animation: H-mid-move 20s ease forwards;
+          animation: H-mid-move 20s ease forwards;
 }
 
 .H-right-stroke {
   stroke-dasharray: 87px;
   stroke-dashoffset: 104px;
-  animation: H-right-move 20s ease forwards;
+  -webkit-animation: H-right-move 20s ease forwards;
+          animation: H-right-move 20s ease forwards;
+}
+
+@-webkit-keyframes H-left-move {
+  0% {
+    stroke-dashoffset: 87px;
+  }
+  5% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes H-left-move {
@@ -787,12 +878,42 @@ body,
   }
 }
 
+@-webkit-keyframes H-mid-move {
+  0% {
+    stroke-dashoffset: 67px;
+  }
+  5% {
+    stroke-dashoffset: 67px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
 @keyframes H-mid-move {
   0% {
     stroke-dashoffset: 67px;
   }
   5% {
     stroke-dashoffset: 67px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes H-right-move {
+  0% {
+    stroke-dashoffset: 87px;
+  }
+  5% {
+    stroke-dashoffset: 87px;
   }
   10% {
     stroke-dashoffset: 0px;
@@ -822,25 +943,44 @@ body,
 .E-left-stroke {
   stroke-dasharray: 124px;
   stroke-dashoffset: 124px;
-  animation: E-left-move 20s ease forwards;
+  -webkit-animation: E-left-move 20s ease forwards;
+          animation: E-left-move 20s ease forwards;
 }
 
 .E-top-stroke {
   stroke-dasharray: 47px;
   stroke-dashoffset: 47px;
-  animation: E-top-move 10s ease forwards;
+  -webkit-animation: E-top-move 10s ease forwards;
+          animation: E-top-move 10s ease forwards;
 }
 
 .E-mid-stroke {
   stroke-dasharray: 42px;
   stroke-dashoffset: 42px;
-  animation: E-mid-move 10s ease forwards;
+  -webkit-animation: E-mid-move 10s ease forwards;
+          animation: E-mid-move 10s ease forwards;
 }
 
 .E-bottom-stroke {
   stroke-dasharray: 47px;
   stroke-dashoffset: 47px;
-  animation: E-bottom-move 10s ease forwards;
+  -webkit-animation: E-bottom-move 10s ease forwards;
+          animation: E-bottom-move 10s ease forwards;
+}
+
+@-webkit-keyframes E-left-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  6% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes E-left-move {
@@ -851,6 +991,21 @@ body,
     stroke-dashoffset: 124px;
   }
   6% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes E-top-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  6% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
     stroke-dashoffset: 0px;
   }
   100% {
@@ -873,6 +1028,21 @@ body,
   }
 }
 
+@-webkit-keyframes E-mid-move {
+  0% {
+    stroke-dashoffset: 42px;
+  }
+  8% {
+    stroke-dashoffset: 42px;
+  }
+  13% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
 @keyframes E-mid-move {
   0% {
     stroke-dashoffset: 42px;
@@ -881,6 +1051,21 @@ body,
     stroke-dashoffset: 42px;
   }
   13% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes E-bottom-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 47px;
+  }
+  16% {
     stroke-dashoffset: 0px;
   }
   100% {
@@ -910,13 +1095,30 @@ body,
   stroke-dasharray: 90px;
   stroke-dashoffset: 90px;
   stroke-linecap: round;
-  animation: L-one-long-move 50s ease forwards;
+  -webkit-animation: L-one-long-move 50s ease forwards;
+          animation: L-one-long-move 50s ease forwards;
 }
 
 .L-one-short-stroke {
   stroke-dasharray: 110px;
   stroke-dashoffset: 110px;
-  animation: L-one-short-move 10s ease forwards;
+  -webkit-animation: L-one-short-move 10s ease forwards;
+          animation: L-one-short-move 10s ease forwards;
+}
+
+@-webkit-keyframes L-one-long-move {
+  0% {
+    stroke-dashoffset: 87px;
+  }
+  2% {
+    stroke-dashoffset: 0px;
+  }
+  7% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes L-one-long-move {
@@ -927,6 +1129,21 @@ body,
     stroke-dashoffset: 0px;
   }
   7% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes L-one-short-move {
+  0% {
+    stroke-dashoffset: 110px;
+  }
+  13% {
+    stroke-dashoffset: 0px;
+  }
+  18% {
     stroke-dashoffset: 0px;
   }
   100% {
@@ -954,26 +1171,46 @@ body,
 .L-two-long-stroke {
   stroke-dasharray: 90px;
   stroke-dashoffset: 90px;
-  animation: L-two-long-move 20s ease forwards;
+  -webkit-animation: L-two-long-move 20s ease forwards;
+          animation: L-two-long-move 20s ease forwards;
 }
 
 .R-two-long-stroke {
   stroke-dasharray: 121px;
   stroke-dashoffset: 121px;
-  animation: R-two-long-move 20s ease forwards;
+  -webkit-animation: R-two-long-move 20s ease forwards;
+          animation: R-two-long-move 20s ease forwards;
 }
 
 .L-two-long-stroke-delayed {
   stroke-dasharray: 90px;
   stroke-dashoffset: 90px;
-  animation: L-two-long-move 20s ease forwards;
-  animation-delay: 0.3s;
+  -webkit-animation: L-two-long-move 20s ease forwards;
+          animation: L-two-long-move 20s ease forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .L-two-short-stroke {
   stroke-dasharray: 60px;
   stroke-dashoffset: 60px;
-  animation: L-two-short-move 10s ease forwards;
+  -webkit-animation: L-two-short-move 10s ease forwards;
+          animation: L-two-short-move 10s ease forwards;
+}
+
+@-webkit-keyframes L-two-long-move {
+  0% {
+    stroke-dashoffset: 90px;
+  }
+  3% {
+    stroke-dashoffset: 90px;
+  }
+  8% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes L-two-long-move {
@@ -991,6 +1228,21 @@ body,
   }
 }
 
+@-webkit-keyframes R-two-long-move {
+  0% {
+    stroke-dashoffset: 121px;
+  }
+  3% {
+    stroke-dashoffset: 121px;
+  }
+  8% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
 @keyframes R-two-long-move {
   0% {
     stroke-dashoffset: 121px;
@@ -999,6 +1251,21 @@ body,
     stroke-dashoffset: 121px;
   }
   8% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes L-two-short-move {
+  0% {
+    stroke-dashoffset: 60px;
+  }
+  15% {
+    stroke-dashoffset: 60px;
+  }
+  20% {
     stroke-dashoffset: 0px;
   }
   100% {
@@ -1026,13 +1293,30 @@ body,
 .O-stroke {
   stroke-dasharray: 302px;
   stroke-dashoffset: 302px;
-  animation: O-move 20s ease forwards;
+  -webkit-animation: O-move 20s ease forwards;
+          animation: O-move 20s ease forwards;
 }
 
 .O-stroke-i {
   stroke-dasharray: 302px;
   stroke-dashoffset: 302px;
-  animation: O-move 50s ease forwards;
+  -webkit-animation: O-move 50s ease forwards;
+          animation: O-move 50s ease forwards;
+}
+
+@-webkit-keyframes O-move {
+  0% {
+    stroke-dashoffset: 302px;
+  }
+  4% {
+    stroke-dashoffset: 302px;
+  }
+  9% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes O-move {
@@ -1055,15 +1339,34 @@ body,
 .red-dot {
   stroke-width: 0px;
   stroke-linecap: round;
-  animation: red-dot-grow 8s ease-out forwards;
-  animation-delay: 1s;
+  -webkit-animation: red-dot-grow 8s ease-out forwards;
+          animation: red-dot-grow 8s ease-out forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .green-dot {
   stroke-width: 0px;
   stroke-linecap: round;
-  animation: green-dot-grow 8s ease-out forwards;
-  animation-delay: 1.1s;
+  -webkit-animation: green-dot-grow 8s ease-out forwards;
+          animation: green-dot-grow 8s ease-out forwards;
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
+@-webkit-keyframes green-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 24px;
+  }
+  100% {
+    stroke-width: 24px;
+  }
 }
 
 @keyframes green-dot-grow {
@@ -1083,8 +1386,25 @@ body,
 .blue-dot {
   stroke-width: 0px;
   stroke-linecap: round;
-  animation: blue-dot-grow 8s ease-out forwards;
-  animation-delay: 1.2s;
+  -webkit-animation: blue-dot-grow 8s ease-out forwards;
+          animation: blue-dot-grow 8s ease-out forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+@-webkit-keyframes blue-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 14px;
+  }
+  100% {
+    stroke-width: 14px;
+  }
 }
 
 @keyframes blue-dot-grow {
@@ -1104,8 +1424,25 @@ body,
 .yellow-dot {
   stroke-width: 0px;
   stroke-linecap: round;
-  animation: yellow-dot-grow 8s ease-out forwards;
-  animation-delay: 1.3s;
+  -webkit-animation: yellow-dot-grow 8s ease-out forwards;
+          animation: yellow-dot-grow 8s ease-out forwards;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+@-webkit-keyframes yellow-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 4px;
+  }
+  100% {
+    stroke-width: 4px;
+  }
 }
 
 @keyframes yellow-dot-grow {
@@ -1120,6 +1457,21 @@ body,
   }
   100% {
     stroke-width: 4px;
+  }
+}
+
+@-webkit-keyframes red-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 34px;
+  }
+  100% {
+    stroke-width: 34px;
   }
 }
 
@@ -1141,7 +1493,20 @@ body,
 .R-long-stroke {
   stroke-dasharray: 43px;
   stroke-dashoffset: 43px;
-  animation: r-two-stroke 2s ease forwards;
+  -webkit-animation: r-two-stroke 2s ease forwards;
+          animation: r-two-stroke 2s ease forwards;
+}
+
+@-webkit-keyframes r-two-stroke {
+  0% {
+    stroke-dashoffset: 43px;
+  }
+  80% {
+    stroke-dashoffset: 10px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes r-two-stroke {
@@ -1159,7 +1524,23 @@ body,
 .I-letter {
   stroke-dasharray: 42px;
   stroke-dashoffset: 42px;
-  animation: i-move 5s ease forwards;
+  -webkit-animation: i-move 5s ease forwards;
+          animation: i-move 5s ease forwards;
+}
+
+@-webkit-keyframes i-move {
+  0% {
+    stroke-dashoffset: 42px;
+  }
+  30% {
+    stroke-dashoffset: 42px;
+  }
+  40% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes i-move {
