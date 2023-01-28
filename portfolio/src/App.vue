@@ -42,7 +42,6 @@ export default {
 <style>
 html {
   background-color: black;
-
 }
 
 body::-webkit-scrollbar {

@@ -698,7 +698,7 @@ body,
   box-sizing: border-box;
   color: #ffffff;
   display: flex;
-  font-family: Phantomsans, sans-serif;
+  /* font-family: Phantomsans, sans-serif; */
   font-size: 20px;
   justify-content: center;
   line-height: 0.8rem;

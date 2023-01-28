@@ -400,9 +400,9 @@ export default {
  -webkit-transform:translateX(100%);	
  transform:translateX(100%);
  /* Apply animation to this element */	
- -moz-animation: example1 20s linear infinite;
- -webkit-animation: example1 20s linear infinite;
- animation: example1 20s linear infinite;
+ -moz-animation: example1 30s linear infinite;
+ -webkit-animation: example1 30s linear infinite;
+ animation: example1 30s linear infinite;
  /* background-color: rgb(61, 61, 61); */
 }
 
@@ -421,9 +421,9 @@ export default {
  -webkit-transform:translateX(100%);	
  transform:translateX(100%);
  /* Apply animation to this element */	
- -moz-animation: example1 10s linear infinite;
- -webkit-animation: example1 10s linear infinite;
- animation: example1 10s linear infinite;
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
  /* background-color: rgb(61, 61, 61); */
 }
 .example1 p:nth-child(3){
@@ -441,16 +441,16 @@ export default {
  -webkit-transform:translateX(100%);	
  transform:translateX(100%);
  /* Apply animation to this element */	
- -moz-animation: example1 15s linear infinite;
- -webkit-animation: example1 15s linear infinite;
- animation: example1 15s linear infinite;
+ -moz-animation: example1 20s linear infinite;
+ -webkit-animation: example1 20s linear infinite;
+ animation: example1 20s linear infinite;
  /* background-color: rgb(61, 61, 61); */
 }
 .example1 p:nth-child(4){
  font-size: 3em;
  color: rgb(122, 122, 122);
  position: absolute;
- width: 180%;
+ width: 200%;
  top: 3%;
  /* height: 100%; */
  margin: 0;
@@ -461,9 +461,9 @@ export default {
  -webkit-transform:translateX(100%);	
  transform:translateX(100%);
  /* Apply animation to this element */	
- -moz-animation: example1 15s linear infinite;
- -webkit-animation: example1 15s linear infinite;
- animation: example1 15s linear infinite;
+ -moz-animation: example1 20s linear infinite;
+ -webkit-animation: example1 20s linear infinite;
+ animation: example1 20s linear infinite;
  /* background-color: rgb(61, 61, 61); */
 }
 /* Move it (define the animation) */
