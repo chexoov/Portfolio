@@ -220,7 +220,7 @@
         </p>
       </div>
       <div
-        class="z-10 transition duration-500 bg-[#0055ff] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1 border-white border-2"
+        class="z-10 transition duration-500 bg-[#0055ff] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
         :class="{
           'scale-105': isHovered,
           '-translate-x-[8rem] translate-y-[1rem] rotate-[-20deg]': isClicked,
@@ -230,7 +230,7 @@
         @mouseleave="changeHoverState()"
       >
       <!-- <p class=" break-words p-2 marquee">asdasdasdasdasdsadasdddddddddddddddasdddddd</p> -->
-      <img src="../images/spa.png" alt="gif" class="h-[100%] rounded-2xl">
+      <img src="../images/spa.png" alt="spa" class=" rounded-[inherit] h-[100%] border-white border-2">
     </div>
     <div
     class="z-20 transition duration-500 bg-[#00ff48] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-2 border-white"
@@ -245,25 +245,34 @@
         <img src="../images/games.png" alt="gif" class="h-[100%] rounded-2xl">
       </div>
       <div
-        class="z-30 transition duration-500 bg-[#f9f942] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
-        :class="{
-          'scale-105': isHovered,
-          'translate-x-[4.1rem] translate-y-[0.5rem] rotate-[7deg]': isClicked,
-        }"
+      class="z-30 transition duration-500 bg-[#f9f942] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
+      :class="{
+        'scale-105': isHovered,
+        'translate-x-[4.1rem] translate-y-[0.5rem] rotate-[7deg]': isClicked,
+      }"
         @click="changeClickState()"
         @mouseover="changeHoverState()"
         @mouseleave="changeHoverState()"
-      ></div>
+        >
+        <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl border-2 border-white">
+
+        </div>
       <div
-        class="z-40 transition duration-500 bg-[#ff003c] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6 shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
-        :class="{
-          'scale-105': isHovered,
-          'translate-x-[10rem] translate-y-[2rem] rotate-[20deg]': isClicked,
-        }"
+      class="example1 z-40 transition duration-500 w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6 shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-2 border-white bg-black"
+      :class="{
+        'scale-105': isHovered,
+        'translate-x-[10rem] translate-y-[2rem] rotate-[20deg]': isClicked,
+      }"
         @click="changeClickState()"
         @mouseover="changeHoverState()"
         @mouseleave="changeHoverState()"
-      ></div>
+        >
+        <!-- <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl border-2 border-white"> -->
+        <p>HTMLㅤㅤㅤCSS </p>
+        <p>SPAㅤㅤㅤREST</p>
+        <p>AXIOSㅤㅤㅤJSON</p>
+        <p>NPMㅤㅤㅤBEM</p>
+      </div>
       <!-- <div id="arrowPointer" class=" translate-x-[10rem] w-[5rem]">
         <img src="../images/arrow.gif" alt="">
       </div> -->
@@ -364,11 +373,108 @@ export default {
   background-size: contain;
 }
 
-.marquee {
-
+.example1 {
+ overflow: hidden;
+ position: relative;
+}
+.example1 p {
+ font-size: 6rem;
+ color: rgb(52, 52, 52);
+ position: absolute;
+ width: 200%;
+ /* height: 100%; */
+ margin: 0;
+ /* line-height: 50px; */
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 20s linear infinite;
+ -webkit-animation: example1 20s linear infinite;
+ animation: example1 20s linear infinite;
+ /* background-color: rgb(61, 61, 61); */
 }
 
-@keyframes marquee-move {
-  
+.example1 p:nth-child(2){
+ font-size: 2em;
+ color: rgb(180, 180, 180);
+ position: absolute;
+ width: 150%;
+ top: 34%;
+ /* height: 100%; */
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 10s linear infinite;
+ -webkit-animation: example1 10s linear infinite;
+ animation: example1 10s linear infinite;
+ /* background-color: rgb(61, 61, 61); */
 }
-</style>
+.example1 p:nth-child(3){
+ font-size: 3em;
+ color: rgb(122, 122, 122);
+ position: absolute;
+ width: 150%;
+ top: 50%;
+ /* height: 100%; */
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+ /* background-color: rgb(61, 61, 61); */
+}
+.example1 p:nth-child(4){
+ font-size: 3em;
+ color: rgb(122, 122, 122);
+ position: absolute;
+ width: 200%;
+ top: 3%;
+ /* height: 100%; */
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+ /* background-color: rgb(61, 61, 61); */
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}</style>
