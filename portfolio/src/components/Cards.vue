@@ -245,7 +245,7 @@
         <img src="../images/games.png" alt="gif" class="h-[100%] rounded-2xl">
       </div>
       <div
-      class="z-30 transition duration-500 bg-[#f9f942] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
+      class="example1 z-30 transition duration-500 bg-black w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-2 border-white"
       :class="{
         'scale-105': isHovered,
         'translate-x-[4.1rem] translate-y-[0.5rem] rotate-[7deg]': isClicked,
@@ -254,11 +254,14 @@
         @mouseover="changeHoverState()"
         @mouseleave="changeHoverState()"
         >
-        <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl border-2 border-white">
-
-        </div>
+        <p>HTML ㅤㅤㅤCSS </p>
+        <p>SPA ㅤㅤㅤREST</p>
+        <p>AXIOS ㅤㅤㅤJSON</p>
+        <p>NPM ㅤㅤㅤBEM</p>
+        
+      </div>
       <div
-      class="example1 z-40 transition duration-500 w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6 shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-2 border-white bg-black"
+      class=" z-40 transition duration-500 w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6 shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-2 border-white bg-black"
       :class="{
         'scale-105': isHovered,
         'translate-x-[10rem] translate-y-[2rem] rotate-[20deg]': isClicked,
@@ -268,10 +271,11 @@
         @mouseleave="changeHoverState()"
         >
         <!-- <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl border-2 border-white"> -->
-        <p>HTMLㅤㅤㅤCSS </p>
+        <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl border-2 border-white">
+        <!-- <p>HTMLㅤㅤㅤCSS </p>
         <p>SPAㅤㅤㅤREST</p>
         <p>AXIOSㅤㅤㅤJSON</p>
-        <p>NPMㅤㅤㅤBEM</p>
+        <p>NPMㅤㅤㅤBEM</p> -->
       </div>
       <!-- <div id="arrowPointer" class=" translate-x-[10rem] w-[5rem]">
         <img src="../images/arrow.gif" alt="">
@@ -401,7 +405,7 @@ export default {
  font-size: 2em;
  color: rgb(180, 180, 180);
  position: absolute;
- width: 150%;
+ width: 130%;
  top: 34%;
  /* height: 100%; */
  margin: 0;
@@ -441,7 +445,7 @@ export default {
  font-size: 3em;
  color: rgb(122, 122, 122);
  position: absolute;
- width: 200%;
+ width: 180%;
  top: 3%;
  /* height: 100%; */
  margin: 0;
@@ -477,4 +481,21 @@ export default {
  -webkit-transform: translateX(-100%); /* Firefox bug fix */
  transform: translateX(-100%); 
  }
-}</style>
+}
+.example1:before, .example1:after {
+  position: absolute;
+  top: 0;
+  width: 3rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+.example1:before {
+  left: 0;
+  background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+.example1:after {
+  right: 0;
+  background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+</style>
