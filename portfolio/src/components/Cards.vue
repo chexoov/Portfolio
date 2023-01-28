@@ -220,7 +220,7 @@
         </p>
       </div>
       <div
-        class="z-10 transition duration-500 bg-[#0055ff] w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
+        class="z-10 transition duration-500 bg-white w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
         :class="{
           'scale-105': isHovered,
           '-translate-x-[8rem] translate-y-[1rem] rotate-[-20deg]': isClicked,
@@ -229,11 +229,10 @@
         @mouseover="changeHoverState()"
         @mouseleave="changeHoverState()"
       >
-      <!-- <p class=" break-words p-2 marquee">asdasdasdasdasdsadasdddddddddddddddasdddddd</p> -->
-      <img src="../images/spa.png" alt="spa" class=" rounded-[inherit] h-[100%] border-white border-2">
+      <img src="../images/spa.png" alt="spa" class=" rounded-[inherit] border-2 border-white">
     </div>
     <div
-    class="z-20 transition duration-500 bg-[#00ff48] w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-2 border-white"
+    class="example1 z-20 transition duration-500 bg-black w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-[3px] border-white"
     :class="{
       'scale-105': isHovered,
       'translate-x-[-2rem] translate-y-[0.5rem] rotate-[-7deg]': isClicked,
@@ -242,10 +241,15 @@
         @mouseover="changeHoverState()"
         @mouseleave="changeHoverState()"
         >
-        <img src="../images/games.png" alt="gif" class="h-[100%] rounded-2xl">
+        <!-- <img src="../images/games.png" alt="gif" class="rounded-2xl"> -->
+        <p>HTML ㅤㅤㅤCSS </p>
+        <p>SPA ㅤㅤㅤREST</p>
+        <p>AXIOS ㅤㅤㅤJSON</p>
+        <p>NPM ㅤㅤㅤBEM</p>
+
       </div>
       <div
-      class="example1 z-30 transition duration-500 bg-black w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-2 border-white"
+      class=" z-30 transition duration-500 bg-white w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
       :class="{
         'scale-105': isHovered,
         'translate-x-[4.1rem] translate-y-[0.5rem] rotate-[7deg]': isClicked,
@@ -254,14 +258,15 @@
         @mouseover="changeHoverState()"
         @mouseleave="changeHoverState()"
         >
-        <p>HTML ㅤㅤㅤCSS </p>
+        <img src="../images/games.png" alt="gif" class="rounded-2xl border-2 border-white">
+        <!-- <p>HTML ㅤㅤㅤCSS </p>
         <p>SPA ㅤㅤㅤREST</p>
         <p>AXIOS ㅤㅤㅤJSON</p>
-        <p>NPM ㅤㅤㅤBEM</p>
+        <p>NPM ㅤㅤㅤBEM</p> -->
         
       </div>
       <div
-      class=" z-40 transition duration-500 w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6 shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-2 border-white bg-black"
+      class="border-2 border-white z-40 transition duration-500 w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6 shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] bg-white"
       :class="{
         'scale-105': isHovered,
         'translate-x-[10rem] translate-y-[2rem] rotate-[20deg]': isClicked,
@@ -271,7 +276,7 @@
         @mouseleave="changeHoverState()"
         >
         <!-- <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl border-2 border-white"> -->
-        <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl border-2 border-white">
+        <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl">
         <!-- <p>HTMLㅤㅤㅤCSS </p>
         <p>SPAㅤㅤㅤREST</p>
         <p>AXIOSㅤㅤㅤJSON</p>
@@ -403,7 +408,7 @@ export default {
 
 .example1 p:nth-child(2){
  font-size: 2em;
- color: rgb(180, 180, 180);
+ color: rgb(213, 213, 213);
  position: absolute;
  width: 130%;
  top: 34%;
