@@ -15,6 +15,7 @@
           'delay-[0ms]': isOnPosition,
           'delay-[2s]': !isOnPosition && isClicked,
         }"
+
       >
         <a href="https://github.com/Inoooooor" target="_blank">
           <img
@@ -259,10 +260,7 @@
         @mouseleave="changeHoverState()"
         >
         <img src="../images/games.png" alt="gif" class="rounded-2xl border-2 border-white">
-        <!-- <p>HTML ㅤㅤㅤCSS </p>
-        <p>SPA ㅤㅤㅤREST</p>
-        <p>AXIOS ㅤㅤㅤJSON</p>
-        <p>NPM ㅤㅤㅤBEM</p> -->
+        
         
       </div>
       <div
@@ -275,16 +273,8 @@
         @mouseover="changeHoverState()"
         @mouseleave="changeHoverState()"
         >
-        <!-- <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl border-2 border-white"> -->
-        <img src="../images/My_face.jpg" alt="gif" class="h-[100%] rounded-2xl">
-        <!-- <p>HTMLㅤㅤㅤCSS </p>
-        <p>SPAㅤㅤㅤREST</p>
-        <p>AXIOSㅤㅤㅤJSON</p>
-        <p>NPMㅤㅤㅤBEM</p> -->
+        <img src="../images/newFace.jpeg" alt="gif" class="h-[100%] rounded-2xl">    
       </div>
-      <!-- <div id="arrowPointer" class=" translate-x-[10rem] w-[5rem]">
-        <img src="../images/arrow.gif" alt="">
-      </div> -->
     </div>
 </template>
 
