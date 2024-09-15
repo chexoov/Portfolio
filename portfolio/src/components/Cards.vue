@@ -331,6 +331,8 @@ export default {
     }, 1000)
   }
 };
+
+
 </script>
 
 <style scoped>

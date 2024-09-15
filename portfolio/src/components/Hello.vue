@@ -1,7 +1,7 @@
 <template>
   <Transition name="fade" mode="out-in" appear>
     <div v-if="!isForm" class="hello-parent flex flex-col" key="Hello">
-      <svg class="hello-word" width="365" height="277" viewBox="0 0 365 277">
+      <svg class="hello-word" width="365" height="350" viewBox="0 0 365 277">
         <g id="H-letter">
           <line
             class="H-left-stroke"
@@ -48,8 +48,8 @@
             stroke-linecap="round"
           />
         </g>
-        <g id="I-letter">
-          <!-- <circle class="O-stroke-i" cx="138" cy="20" r="5" stroke="#fff" fill="none" stroke-width="20" /> -->
+        <!-- <g id="I-letter">
+          <circle class="O-stroke-i" cx="138" cy="20" r="5" stroke="#fff" fill="none" stroke-width="20" />
           <line
             class="I-letter"
             x1="138"
@@ -61,8 +61,60 @@
             stroke-width="34"
             stroke-linecap="round"
           />
+        </g> -->
+        <!-- буква Р ( первая) -->
+        <g id="R-letter">
+          <line
+            class="R-two-long-stroke"
+            x1="138"
+            y1="1"
+            x2="138"
+            y2="120"
+            stroke="#fff"
+            stroke-width="34"
+          ></line>
+          <!-- нижняя середина -->
+          <line
+            class="H-mid-stroke-delayed"
+            x1="143"
+            y1="62"
+            x2="193"
+            y2="62"
+            stroke="#fff"
+            fill="none"
+            stroke-width="34"
+          ></line>
+          <line
+            class="R-long-stroke"
+            x1="208"
+            y1="17"
+            x2="208"
+            y2="60"
+            stroke="#fff"
+            stroke-width="34"
+          ></line>
+         
+          <line
+            class="R-long-stroke"
+            x1="210"
+            y1="80"
+            x2="210"
+            y2="120"
+            stroke="#fff"
+            fill="none"
+            stroke-width="34"
+          />
+          <!-- верхняя середина -->
+          <line
+            class="H-mid-stroke-delayed"
+            x1="150"
+            y1="18"
+            x2="200"
+            y2="18"
+            stroke="#fff"
+            stroke-width="34"
+          ></line>
         </g>
-
         <!-- <g id="E-letter">
         <line class="E-left-stroke" x1="138" y1="0" x2="138" y2="124" stroke="#000" fill="none" stroke-width="34" />
         <line class="E-top-stroke" x1="154" y1="17" x2="201" y2="17" stroke="#000" fill="none" stroke-width="34" />
@@ -70,38 +122,42 @@
         <line class="E-bottom-stroke" x1="154" y1="107" x2="201" y2="107" stroke="#000" fill="none" stroke-width="34" />
       </g> -->
 
+      <!-- буква Т -->
         <g id="L-one-letter">
           <line
             class="L-one-long-stroke"
-            x1="17"
-            y1="170"
-            x2="17"
+            x1="50"
+            y1="190"
+            x2="50"
             y2="260"
             stroke="#fff"
             fill="none"
             stroke-width="34"
           />
           <line
-            class="L-one-short-stroke"
-            x1="20"
-            y1="170"
-            x2="84"
-            y2="260"
+            class="H-mid-stroke-delayed"
+            x1="43"
+            y1="168"
+            x2="17"
+            y2="168"
             stroke="#fff"
             fill="none"
             stroke-width="34"
             stroke-linecap="round"
           />
           <line
-            class="L-one-long-stroke"
-            x1="84"
-            y1="170"
-            x2="84"
-            y2="260"
+            class="H-mid-stroke-delayed"
+            x1="35"
+            y1="168"
+            x2="83"
+            y2="168"
             stroke="#fff"
             fill="none"
             stroke-width="34"
+            stroke-linecap="round"
           />
+          
+          
         </g>
 
         <g id="L-two-letter">
@@ -143,6 +199,8 @@
         <!-- <g id="O-letter">
         <circle class="O-stroke" cx="231" cy="215" r="48" stroke="#fff" fill="none" stroke-width="31" />
       </g> -->
+        <!-- буква Р -->
+
         <g id="R-letter">
           <line
             class="R-two-long-stroke"
@@ -192,23 +250,23 @@
             stroke-width="34"
           />
         </g>
-
+        <!-- кругляшки -->
         <g id="red-dot">
           <line
-            x1="138"
-            y1="20"
-            x2="138"
-            y2="20"
+            x1="163"
+            y1="-19"
+            x2="163"
+            y2="-19"
             stroke="#ff003c"
             class="red-dot"
           />
         </g>
         <g id="green-dot">
           <line
-            x1="138"
-            y1="20"
-            x2="138"
-            y2="20"
+            x1="163"
+            y1="-19"
+            x2="163"
+            y2="-19"
             stroke="#00ff48"
             stroke-width="33"
             class="green-dot"
@@ -216,10 +274,10 @@
         </g>
         <g id="blue-dot">
           <line
-            x1="138"
-            y1="20"
-            x2="138"
-            y2="20"
+            x1="163"
+            y1="-19"
+            x2="163"
+            y2="-19"
             stroke="#0055ff"
             stroke-width="33"
             class="blue-dot"
@@ -227,17 +285,19 @@
         </g>
         <g id="yellow-dot">
           <line
-            x1="138"
-            y1="20"
-            x2="138"
-            y2="20"
+            x1="163"
+            y1="-19"
+            x2="163"
+            y2="-19"
             stroke="#f9f942"
             stroke-width="33"
             class="yellow-dot"
           />
         </g>
       </svg>
-      <p class="text-white tracking-[0.3rem] text-lg pt-4 mount-anime pointer-events-none">
+      <p
+        class="text-white tracking-[0.3rem] text-lg pt-4 mount-anime pointer-events-none"
+      >
         Web-developer / Freelancer
       </p>
     </div>
@@ -297,7 +357,7 @@
           name="text"
           autocomplete="off"
           required
-          class=" max-md:text-[16px]"
+          class="max-md:text-[16px]"
         ></textarea>
         <label for="text" class="label-name">
           <!-- <span class="content-name"> Содержание </span> -->
@@ -456,11 +516,13 @@ body,
   margin: 0;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .message-borders {
@@ -470,7 +532,7 @@ body,
 .bot-animation {
   transform: translateY(-3.4rem);
   -webkit-animation: bot-move 10s ease;
-          animation: bot-move 10s ease;
+  animation: bot-move 10s ease;
 }
 
 @-webkit-keyframes bot-move {
@@ -518,7 +580,7 @@ body,
   transition-property: all;
   /* transition: 1s ease; */
   -webkit-animation: bot-message-move 10s ease;
-          animation: bot-message-move 10s ease;
+  animation: bot-message-move 10s ease;
   /* width: 95%; */
 }
 
@@ -583,7 +645,7 @@ body,
 
 @media (max-width: 768px) {
   .form textarea {
-  font-size: 16px;
+    font-size: 16px;
   }
 }
 
@@ -612,7 +674,7 @@ body,
       #0055ff 90%
     )
     5;
-     border-image: linear-gradient(
+  border-image: linear-gradient(
       to right,
       #00ff48 0%,
       #f9f942 25%,
@@ -707,8 +769,8 @@ body,
   padding: 3px;
   text-decoration: none;
   -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
@@ -744,38 +806,38 @@ body,
   /* animation-delay: 3s; */
   opacity: 1;
   -webkit-animation: mount-move 1.5s ease;
-          animation: mount-move 1.5s ease;
+  animation: mount-move 1.5s ease;
 }
 .mount-anime-subject {
   /* animation-delay: 3s; */
   opacity: 1;
   -webkit-animation: mount-move 1.7s ease;
-          animation: mount-move 1.7s ease;
+  animation: mount-move 1.7s ease;
 }
 .mount-anime-mail {
   /* animation-delay: 3s; */
   opacity: 1;
   -webkit-animation: mount-move 2s ease;
-          animation: mount-move 2s ease;
+  animation: mount-move 2s ease;
 }
 .mount-anime-textarea {
   /* animation-delay: 3s; */
   opacity: 1;
   -webkit-animation: mount-move 2.2s ease;
-          animation: mount-move 2.2s ease;
+  animation: mount-move 2.2s ease;
 }
 
 .mount-anime-send {
   /* animation-delay: 3s; */
   opacity: 1;
   -webkit-animation: mount-move 2.5s ease;
-          animation: mount-move 2.5s ease;
+  animation: mount-move 2.5s ease;
 }
 
 .mount-anime-btn {
   /* opacity: 1; */
   -webkit-animation: mount-move 4s ease;
-          animation: mount-move 4s ease;
+  animation: mount-move 4s ease;
 }
 
 @-webkit-keyframes mount-move {
@@ -836,7 +898,7 @@ body,
   stroke-dasharray: 87px;
   /* stroke-dashoffset: 124; */
   -webkit-animation: H-left-move 20s ease forwards;
-          animation: H-left-move 20s ease forwards;
+  animation: H-left-move 20s ease forwards;
 }
 
 .H-mid-stroke-delayed {
@@ -844,21 +906,22 @@ body,
   stroke-dashoffset: 67px;
   -webkit-animation: H-mid-move 20s ease forwards;
           animation: H-mid-move 20s ease forwards;
-  -webkit-animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s; 
           animation-delay: 0.5s;
+         
 }
 .H-mid-stroke {
   stroke-dasharray: 67px;
   stroke-dashoffset: 67px;
   -webkit-animation: H-mid-move 20s ease forwards;
-          animation: H-mid-move 20s ease forwards;
+  animation: H-mid-move 20s ease forwards;
 }
 
 .H-right-stroke {
   stroke-dasharray: 87px;
   stroke-dashoffset: 104px;
   -webkit-animation: H-right-move 20s ease forwards;
-          animation: H-right-move 20s ease forwards;
+  animation: H-right-move 20s ease forwards;
 }
 
 @-webkit-keyframes H-left-move {
@@ -951,28 +1014,28 @@ body,
   stroke-dasharray: 124px;
   stroke-dashoffset: 124px;
   -webkit-animation: E-left-move 20s ease forwards;
-          animation: E-left-move 20s ease forwards;
+  animation: E-left-move 20s ease forwards;
 }
 
 .E-top-stroke {
   stroke-dasharray: 47px;
   stroke-dashoffset: 47px;
   -webkit-animation: E-top-move 10s ease forwards;
-          animation: E-top-move 10s ease forwards;
+  animation: E-top-move 10s ease forwards;
 }
 
 .E-mid-stroke {
   stroke-dasharray: 42px;
   stroke-dashoffset: 42px;
   -webkit-animation: E-mid-move 10s ease forwards;
-          animation: E-mid-move 10s ease forwards;
+  animation: E-mid-move 10s ease forwards;
 }
 
 .E-bottom-stroke {
   stroke-dasharray: 47px;
   stroke-dashoffset: 47px;
   -webkit-animation: E-bottom-move 10s ease forwards;
-          animation: E-bottom-move 10s ease forwards;
+  animation: E-bottom-move 10s ease forwards;
 }
 
 @-webkit-keyframes E-left-move {
@@ -1103,14 +1166,14 @@ body,
   stroke-dashoffset: 90px;
   stroke-linecap: round;
   -webkit-animation: L-one-long-move 50s ease forwards;
-          animation: L-one-long-move 50s ease forwards;
+  animation: L-one-long-move 50s ease forwards;
 }
 
 .L-one-short-stroke {
   stroke-dasharray: 110px;
   stroke-dashoffset: 110px;
   -webkit-animation: L-one-short-move 10s ease forwards;
-          animation: L-one-short-move 10s ease forwards;
+  animation: L-one-short-move 10s ease forwards;
 }
 
 @-webkit-keyframes L-one-long-move {
@@ -1179,7 +1242,7 @@ body,
   stroke-dasharray: 90px;
   stroke-dashoffset: 90px;
   -webkit-animation: L-two-long-move 20s ease forwards;
-          animation: L-two-long-move 20s ease forwards;
+  animation: L-two-long-move 20s ease forwards;
 }
 
 .R-two-long-stroke {
@@ -1193,16 +1256,16 @@ body,
   stroke-dasharray: 90px;
   stroke-dashoffset: 90px;
   -webkit-animation: L-two-long-move 20s ease forwards;
-          animation: L-two-long-move 20s ease forwards;
+  animation: L-two-long-move 20s ease forwards;
   -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .L-two-short-stroke {
   stroke-dasharray: 60px;
   stroke-dashoffset: 60px;
   -webkit-animation: L-two-short-move 10s ease forwards;
-          animation: L-two-short-move 10s ease forwards;
+  animation: L-two-short-move 10s ease forwards;
 }
 
 @-webkit-keyframes L-two-long-move {
@@ -1301,14 +1364,14 @@ body,
   stroke-dasharray: 302px;
   stroke-dashoffset: 302px;
   -webkit-animation: O-move 20s ease forwards;
-          animation: O-move 20s ease forwards;
+  animation: O-move 20s ease forwards;
 }
 
 .O-stroke-i {
   stroke-dasharray: 302px;
   stroke-dashoffset: 302px;
   -webkit-animation: O-move 50s ease forwards;
-          animation: O-move 50s ease forwards;
+  animation: O-move 50s ease forwards;
 }
 
 @-webkit-keyframes O-move {
@@ -1347,18 +1410,18 @@ body,
   stroke-width: 0px;
   stroke-linecap: round;
   -webkit-animation: red-dot-grow 8s ease-out forwards;
-          animation: red-dot-grow 8s ease-out forwards;
+  animation: red-dot-grow 8s ease-out forwards;
   -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .green-dot {
   stroke-width: 0px;
   stroke-linecap: round;
   -webkit-animation: green-dot-grow 8s ease-out forwards;
-          animation: green-dot-grow 8s ease-out forwards;
+  animation: green-dot-grow 8s ease-out forwards;
   -webkit-animation-delay: 1.1s;
-          animation-delay: 1.1s;
+  animation-delay: 1.1s;
 }
 
 @-webkit-keyframes green-dot-grow {
@@ -1394,9 +1457,9 @@ body,
   stroke-width: 0px;
   stroke-linecap: round;
   -webkit-animation: blue-dot-grow 8s ease-out forwards;
-          animation: blue-dot-grow 8s ease-out forwards;
+  animation: blue-dot-grow 8s ease-out forwards;
   -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 
 @-webkit-keyframes blue-dot-grow {
@@ -1432,9 +1495,9 @@ body,
   stroke-width: 0px;
   stroke-linecap: round;
   -webkit-animation: yellow-dot-grow 8s ease-out forwards;
-          animation: yellow-dot-grow 8s ease-out forwards;
+  animation: yellow-dot-grow 8s ease-out forwards;
   -webkit-animation-delay: 1.3s;
-          animation-delay: 1.3s;
+  animation-delay: 1.3s;
 }
 
 @-webkit-keyframes yellow-dot-grow {
@@ -1532,7 +1595,7 @@ body,
   stroke-dasharray: 42px;
   stroke-dashoffset: 42px;
   -webkit-animation: i-move 5s ease forwards;
-          animation: i-move 5s ease forwards;
+  animation: i-move 5s ease forwards;
 }
 
 @-webkit-keyframes i-move {
@@ -1564,5 +1627,4 @@ body,
     stroke-dashoffset: 0;
   }
 }
-
 </style>
