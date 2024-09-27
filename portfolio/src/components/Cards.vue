@@ -1,86 +1,41 @@
 <template>
   <div
-    id="cardGroup"
-    class="bg-black bg-opacity-0 h-[100%] w-[100%] grid place-items-center transition duration-1000 select-none relative max-md:scale-50"
+  id="cardGroup"
+  class="bg-black bg-opacity-0 h-[100%] w-[100%] grid place-items-center transition duration-1000 select-none relative max-md:scale-50"
   >
+  <div><input v-model.trim="newObj.key"/></div>
+  
     <SmallCard
       v-for="(card, index) in cardsData"
       v-bind="{ ...card, isClicked }"
       :key="index"
     />
-    <div
-      class="z-10 transition duration-500 bg-white w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 rotate-1"
-      :class="{
-        'scale-105': isHovered,
-        '-translate-x-[8rem] translate-y-[1rem] rotate-[-20deg]': isClicked,
-      }"
+
+    <BigCard
       @click="changeClickState()"
-      @mouseover="changeHoverState()"
-      @mouseleave="changeHoverState()"
+      v-for="(card, index) in BigCardData"
+      v-bind="{ ...card, isClicked, isHovered }"
+      :key="index"
     >
-      <img
-        src="../images/spa.png"
-        alt="spa"
-        class="rounded-[inherit] border-2 border-white"
-      />
-    </div>
-    <div
-      class="example1 z-20 transition duration-500 bg-black w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-1rem] translate-y-2 rotate-[-4deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] border-[3px] border-white"
-      :class="{
-        'scale-105': isHovered,
-        'translate-x-[-2rem] translate-y-[0.5rem] rotate-[-7deg]': isClicked,
-      }"
-      @click="changeClickState()"
-      @mouseover="changeHoverState()"
-      @mouseleave="changeHoverState()"
-    >
-      <p>HTML ㅤㅤㅤCSS</p>
-      <p>SPA ㅤㅤㅤREST</p>
-      <p>AXIOS ㅤㅤㅤJSON</p>
-      <p>NPM ㅤㅤㅤBEM</p>
-    </div>
-    <div
-      class="z-30 transition duration-500 bg-white w-48 aspect-[5/7] rounded-2xl absolute translate-x-[-0.5rem] translate-y-2 rotate-[-2deg] shadow-[-20px_10px_20px_rgba(0,0,0,0.25)]"
-      :class="{
-        'scale-105': isHovered,
-        'translate-x-[4.1rem] translate-y-[0.5rem] rotate-[7deg]': isClicked,
-      }"
-      @click="changeClickState()"
-      @mouseover="changeHoverState()"
-      @mouseleave="changeHoverState()"
-    >
-      <img
-        src="../images/games.png"
-        alt="gif"
-        class="rounded-2xl border-2 border-white"
-      />
-    </div>
-    <div
-      class="border-2 border-white z-40 transition duration-500 w-48 aspect-[5/7] rounded-2xl absolute translate-x-1 translate-y-2 rotate-6 shadow-[-20px_10px_20px_rgba(0,0,0,0.25)] bg-white"
-      :class="{
-        'scale-105': isHovered,
-        'translate-x-[10rem] translate-y-[2rem] rotate-[20deg]': isClicked,
-      }"
-      @click="changeClickState()"
-      @mouseover="changeHoverState()"
-      @mouseleave="changeHoverState()"
-    >
-      <img
-        src="../images/newFace.jpeg"
-        alt="gif"
-        class="h-[100%] rounded-2xl"
-      />
-    </div>
+      <p v-if="!card.img">HTML ㅤㅤㅤCSS</p>
+      <p v-if="!card.img">SPA ㅤㅤㅤREST</p>
+      <p v-if="!card.img">AXIOS ㅤㅤㅤJSON</p>
+      <p v-if="!card.img">NPM ㅤㅤㅤBEM</p>
+    </BigCard>
   </div>
 </template>
 
 <script lang="ts">
 import SmallCard from "./SmallCard.vue";
+import BigCard from "./BigCard.vue";
 
 export default {
-  components: { SmallCard },
+  components: { SmallCard, BigCard },
+
+
   data() {
     return {
+      newObj: { key: "value" },
       isMounted: false,
       isHovered: false,
       isClicked: false,
@@ -243,6 +198,60 @@ export default {
           label: " Мои Онлайн Шашки (сырые)",
         },
       ],
+      BigCardData: [
+        {
+          xInitial: 1,
+          yInitial: -0.5,
+          rotateInitial: 0.5,
+          x: -9,
+          y: -1.5,
+          img: "src/images/spa.png",
+          rotate: -20,
+          z: "10",
+          link: "#",
+          duration: 0.5,
+          label: "",
+        },
+        {
+          xInitial: 0,
+          yInitial: 0,
+          rotateInitial: -6,
+          x: 4,
+          y: 0,
+          img: "src/images/games.png",
+          rotate: 4,
+          z: "30",
+          link: "#",
+          duration: 0.5,
+          label: "",
+        },
+        {
+          xInitial: 1,
+          yInitial: 0,
+          rotateInitial: 3,
+          x: 9.5,
+          y: 0,
+          img: "src/images/newFace.jpeg",
+          rotate: 12,
+          z: "40",
+          link: "#",
+          duration: 0.5,
+          label: "",
+        },
+        {
+          xInitial: -2,
+          yInitial: 0.5,
+          rotateInitial: -17,
+          x: -2,
+          y: 0.5,
+          img: "",
+          rotate: -7,
+          z: "20",
+          link: "#",
+          duration: 0.5,
+          label: "",
+        },
+      ],
     };
   },
   computed: {
@@ -250,8 +259,18 @@ export default {
       return this.isMounted ? true : false;
     },
   },
+  mounted() {
+    console.log(this.newObj.key);
+    this.newObj.key = "key";
+  },
+  watch: {
+    'newObj.key'(newValue, oldValue) {
+      console.log(newValue, oldValue)
+    }
+  },
   methods: {
     changeHoverState() {
+      console.log("change");
       this.isHovered = !this.isHovered;
     },
     changeSquareHoverState() {

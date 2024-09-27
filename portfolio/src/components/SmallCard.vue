@@ -10,8 +10,6 @@
             :class="{
               ' rotate-[8deg] duration-[1s] cursor-pointer ':
                 isClicked,
-              
-             
             }"
             :style="styles"
           >
@@ -93,7 +91,7 @@ const duration = computed(() => {
     return props.isClicked ? props.duration : '1'
 })
 const hoverScale = computed(() => {
-    return isCardHovered.value ? '1.2' : '1'
+    return isCardHovered.value ? '1.1' : '1'
 })
 
 const styles = computed(() => {
