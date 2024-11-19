@@ -3,7 +3,6 @@
   id="cardGroup"
   class="bg-black bg-opacity-0 h-[100%] w-[100%] grid place-items-center transition duration-1000 select-none relative max-md:scale-50"
   >
-  <div><input v-model.trim="newObj.key"/></div>
   
     <SmallCard
       v-for="(card, index) in cardsData"

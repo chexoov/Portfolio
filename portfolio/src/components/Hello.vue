@@ -149,7 +149,7 @@ export default {
       try {
         const options = {
           method: "POST",
-          url: "https://api.telegram.org/bot5847470412%3AAAHs4sky2p9-PFyrz7v98nhCTRoYLRm6rSM/sendMessage",
+          url: "https://api.telegram.org/bot7478100790:AAE3t_2wrz4VmYZyqMbrsXTDMR0S7eFlB-Y/sendMessage",
           headers: {
             accept: "application/json",
             "content-type": "application/json",
@@ -160,7 +160,7 @@ export default {
             disable_notification: false,
             parse_mode: "HTML",
             reply_to_message_id: null,
-            chat_id: "602753868",
+            chat_id: "501766778",
           },
         };
 
