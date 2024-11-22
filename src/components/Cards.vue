@@ -50,7 +50,7 @@ export default {
           img: "/github.png",
           rotate: 8,
           z: "15",
-          link: "https://github.com/Inoooooor",
+          link: "https://github.com/chexoov",
           duration: 1,
           label: "мой GitHub",
         },
